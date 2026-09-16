@@ -1,0 +1,127 @@
+[
+  {
+    "document_id": "DOC-TNAU-BANANA-001",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Horticulture: Banana",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 7.2 - Sigatoka Leaf Spot Management, Page 142",
+    "crop": "Banana",
+    "crop_id": "banana",
+    "crop_scientific_name": "Musa paradisiaca",
+    "crop_aliases": [
+      "vazhai",
+      "vaazhai",
+      "plantain",
+      "வாழை"
+    ],
+    "target_problem": "Sigatoka Leaf Spot",
+    "problem_scientific_name": "Pseudocercospora musae",
+    "problem_category": "disease",
+    "problem_aliases": [
+      "sigatoka",
+      "leaf spot",
+      "elai pulli",
+      "இலைப்புள்ளி",
+      "இலை புள்ளி"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Propiconazole",
+    "formulation": "EC",
+    "concentration": "25% EC",
+    "dose": 1.0,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 250.0,
+    "waiting_period_days": 30,
+    "brand_names": [
+      "Tilt"
+    ],
+    "instructions_en": "Foliar spray with Propiconazole 25% EC @ 1.0 ml/l with wetting agent (teepol @ 1 ml/l) covering lower surface of leaves.",
+    "instructions_ta": "வாழை சிகாடோகா இலைப்புள்ளி நோய்: புரோபிகோனசோல் 25% EC மருந்தை 1 மிலி/லிட்டர் வீதம் ஒட்டும் திரவத்துடன் இலைகளின் அடிப்பகுதியில் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024: Banana Sigatoka Leaf Spot (Pseudocercospora musae) - Spray Propiconazole 25% EC @ 1 ml/l + mineral oil 1% or wetting agent.",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-BANANA-002",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Horticulture: Banana",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 7.1 - Pseudostem Borer / Weevil Management, Page 145",
+    "crop": "Banana",
+    "crop_id": "banana",
+    "crop_scientific_name": "Musa paradisiaca",
+    "crop_aliases": [
+      "vazhai",
+      "vaazhai",
+      "வாழை"
+    ],
+    "target_problem": "Pseudostem Borer",
+    "problem_scientific_name": "Odoiporus longicollis",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "stem weevil",
+      "pseudostem weevil",
+      "thandu vandu",
+      "தண்டு வண்டு",
+      "தண்டு துளைப்பான்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Chlorpyrifos",
+    "formulation": "EC",
+    "concentration": "20% EC",
+    "dose": 2.5,
+    "dose_unit": "ml/l",
+    "application_basis": "stem_swabbing",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 60,
+    "brand_names": [
+      "Durmet",
+      "Dursban"
+    ],
+    "instructions_en": "Pseudostem injection or stem swabbing @ 2.5 ml/l at 5th and 6th month after planting.",
+    "instructions_ta": "வாழை தண்டு வண்டு / தண்டு துளைப்பான்: குளோர்பைரிபாஸ் 20% EC மருந்தை 2.5 மிலி/லிட்டர் நீரில் கலந்து தண்டுப்பகுதியில் நனையுமாறு ஊற்றவும் அல்லது தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024 (Banana, p.145): Banana pseudostem borer (Odoiporus longicollis) - Swabbing with Chlorpyrifos 20% EC @ 2.5 ml/l.",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-BANANA-003",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Horticulture: Banana",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 7.3 - Panama Wilt Management, Page 148",
+    "crop": "Banana",
+    "crop_id": "banana",
+    "crop_scientific_name": "Musa paradisiaca",
+    "crop_aliases": [
+      "vazhai",
+      "vaazhai",
+      "வாழை"
+    ],
+    "target_problem": "Panama Wilt",
+    "problem_scientific_name": "Fusarium oxysporum f. sp. cubense",
+    "problem_category": "disease",
+    "problem_aliases": [
+      "fusarium wilt",
+      "wilt",
+      "vadal noi",
+      "வாடல் நோய்",
+      "வாடல்நோய்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Carbendazim",
+    "formulation": "WP",
+    "concentration": "50% WP",
+    "dose": 2.0,
+    "dose_unit": "g/l",
+    "application_basis": "soil_drenching",
+    "water_volume_l_per_acre": 300.0,
+    "waiting_period_days": 45,
+    "brand_names": [
+      "Bavistin"
+    ],
+    "instructions_en": "Drench collar region with Carbendazim 50% WP @ 2.0 g/l (1-2 liters per plant) at 2nd, 4th and 6th month.",
+    "instructions_ta": "வாழை வாடல் நோய்: கார்பென்டாசிம் 50% WP மருந்தை 2 கிராம்/லிட்டர் நீரில் கரைத்து வேர்ப்பகுதியில் ஊற்றவும்.",
+    "raw_source_text": "TNAU CPG 2024: Banana Panama Wilt (Fusarium oxysporum) - Corm injection or drenching with Carbendazim 50% WP @ 2 g/l.",
+    "evidence_status": "VERIFIED"
+  }
+]

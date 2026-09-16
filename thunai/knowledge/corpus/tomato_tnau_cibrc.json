@@ -1,0 +1,164 @@
+[
+  {
+    "document_id": "DOC-TNAU-TOMATO-001",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Vegetables: Tomato",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 4.1 - Tomato Fruit Borer Management, Page 85",
+    "crop": "Tomato",
+    "crop_id": "tomato",
+    "crop_scientific_name": "Solanum lycopersicum",
+    "crop_aliases": [
+      "thakkali",
+      "takali",
+      "tamatar",
+      "தக்காளி"
+    ],
+    "target_problem": "Tomato Fruit Borer",
+    "problem_scientific_name": "Helicoverpa armigera",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "fruit borer",
+      "caterpillar",
+      "kay puzhu",
+      "காய்ப்புழு",
+      "காய் புழு"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Chlorantraniliprole",
+    "formulation": "SC",
+    "concentration": "18.5% SC",
+    "dose": 0.3,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 3,
+    "brand_names": [
+      "Coragen"
+    ],
+    "instructions_en": "Spray Chlorantraniliprole 18.5% SC @ 0.3 ml/l (60 ml/acre) at initiation of flowering and early fruit set to control neonate borers.",
+    "instructions_ta": "தக்காளி காய்ப்புழு கட்டுப்பாடு: குளோரான்ட்ரானிலிப்ரோல் 18.5% SC மருந்தை லிட்டருக்கு 0.3 மிலி வீதம் தெளிக்கவும்.",
+    "raw_source_text": "TNAU Agritech Portal (2024): Tomato Fruit Borer (Helicoverpa armigera) - Spray Chlorantraniliprole 18.5% SC @ 0.3 ml/lit (60 ml/acre). Waiting period: 3 days.",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-TOMATO-002",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Vegetables: Tomato",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 4.1 - Tomato Fruit Borer Management, Page 86",
+    "crop": "Tomato",
+    "crop_id": "tomato",
+    "crop_scientific_name": "Solanum lycopersicum",
+    "crop_aliases": [
+      "thakkali",
+      "takali",
+      "தக்காளி"
+    ],
+    "target_problem": "Tomato Fruit Borer",
+    "problem_scientific_name": "Helicoverpa armigera",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "fruit borer",
+      "puzhu",
+      "காய்ப்புழு"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Indoxacarb",
+    "formulation": "SC",
+    "concentration": "14.5% SC",
+    "dose": 1.0,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 5,
+    "brand_names": [
+      "Avaunt"
+    ],
+    "instructions_en": "Spray Indoxacarb 14.5% SC @ 1.0 ml/l (200 ml/acre) at egg hatching and early instar stage.",
+    "instructions_ta": "தக்காளி காய்ப்புழு: இண்டோக்சாகார்ப் 14.5% SC மருந்தை லிட்டருக்கு 1.0 மிலி வீதம் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024 (Tomato, p.86): Indoxacarb 14.5% SC @ 1.0 ml/l against Helicoverpa armigera. Waiting period: 5 days.",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-TOMATO-003",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Vegetables: Tomato",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 4.3 - Early Blight Management, Page 89",
+    "crop": "Tomato",
+    "crop_id": "tomato",
+    "crop_scientific_name": "Solanum lycopersicum",
+    "crop_aliases": [
+      "thakkali",
+      "takali",
+      "தக்காளி"
+    ],
+    "target_problem": "Early Blight",
+    "problem_scientific_name": "Alternaria solani",
+    "problem_category": "disease",
+    "problem_aliases": [
+      "blight",
+      "leaf blight",
+      "target spot",
+      "இலைக்கருகல்",
+      "இலை கருகல்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Mancozeb",
+    "formulation": "WP",
+    "concentration": "75% WP",
+    "dose": 2.0,
+    "dose_unit": "g/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 3,
+    "brand_names": [
+      "Dithane M-45",
+      "Indofil M-45"
+    ],
+    "instructions_en": "Spray Mancozeb 75% WP @ 2.0 g/l (400 g/acre) as prophylactic spray or at first symptom onset.",
+    "instructions_ta": "தக்காளி இலைக்கருகல் நோய்: மேன்கோசெப் 75% WP மருந்தை லிட்டருக்கு 2 கிராம் வீதம் இலைகளில் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024 (p.89): Tomato Early Blight (Alternaria solani) - Spray Mancozeb 75% WP @ 2 g/l (400 g/acre).",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-TOMATO-004",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Vegetables: Tomato",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 4.3 - Late Blight Management, Page 91",
+    "crop": "Tomato",
+    "crop_id": "tomato",
+    "crop_scientific_name": "Solanum lycopersicum",
+    "crop_aliases": [
+      "thakkali",
+      "takali",
+      "தக்காளி"
+    ],
+    "target_problem": "Late Blight",
+    "problem_scientific_name": "Phytophthora infestans",
+    "problem_category": "disease",
+    "problem_aliases": [
+      "late blight",
+      "blight",
+      "பிற்பருவ கருகல்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Metalaxyl-M + Mancozeb",
+    "formulation": "WP",
+    "concentration": "4% + 64% WP",
+    "dose": 2.5,
+    "dose_unit": "g/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 7,
+    "brand_names": [
+      "Ridomil Gold"
+    ],
+    "instructions_en": "Apply Metalaxyl-M + Mancozeb @ 2.5 g/l (500 g/acre) during cloudy, cool and high relative humidity weather.",
+    "instructions_ta": "தக்காளி பின் பருவ இலைக்கருகல்: மெட்டலாக்ஸில் + மேன்கோசெப் மருந்தை லிட்டருக்கு 2.5 கிராம் வீதம் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024 (p.91): Tomato Late Blight (Phytophthora infestans) - Spray Metalaxyl-M 4% + Mancozeb 64% WP @ 2.5 g/l.",
+    "evidence_status": "VERIFIED"
+  }
+]

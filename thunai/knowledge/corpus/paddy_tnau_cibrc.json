@@ -1,0 +1,176 @@
+[
+  {
+    "document_id": "DOC-TNAU-PADDY-001",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Paddy (Rice)",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 1.2 - Yellow Stem Borer Management, Page 14",
+    "crop": "Paddy",
+    "crop_id": "paddy",
+    "crop_scientific_name": "Oryza sativa",
+    "crop_aliases": [
+      "rice",
+      "nellu",
+      "nel",
+      "dhan",
+      "நெல்",
+      "அரிசி"
+    ],
+    "target_problem": "Yellow Stem Borer",
+    "problem_scientific_name": "Scirpophaga incertulas",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "stem borer",
+      "dead heart",
+      "white earhead",
+      "thanduthulaippan",
+      "குருத்துப்பூச்சி",
+      "தண்டு துளைப்பான்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Chlorantraniliprole",
+    "formulation": "SC",
+    "concentration": "18.5% SC",
+    "dose": 0.3,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 47,
+    "brand_names": [
+      "Coragen",
+      "Ferterra"
+    ],
+    "instructions_en": "Apply at ETL (2 egg masses/sq.m or 10% dead hearts in vegetative stage / 2% white ears at flowering stage) with 200 liters of water per acre.",
+    "instructions_ta": "நெல் தண்டு துளைப்பான் / குருத்துப்பூச்சி மேலாண்மை: குளோரான்ட்ரானிலிப்ரோல் 18.5% SC மருந்தை ஏக்கருக்கு 60 மிலி (0.3 மிலி/லிட்டர்) வீதம் 200 லிட்டர் நீரில் கலந்து தெளிக்கவும்.",
+    "raw_source_text": "TNAU CP Studies (2024): Paddy Yellow Stem Borer (Scirpophaga incertulas) - Spray Chlorantraniliprole 18.5% SC @ 0.3 ml/l of water or 60 ml/acre (diluted in 200 L water). PHI: 47 days.",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-PADDY-002",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Paddy (Rice)",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 1.2 - Yellow Stem Borer Management, Page 15",
+    "crop": "Paddy",
+    "crop_id": "paddy",
+    "crop_scientific_name": "Oryza sativa",
+    "crop_aliases": [
+      "rice",
+      "nellu",
+      "nel",
+      "dhan",
+      "நெல்"
+    ],
+    "target_problem": "Yellow Stem Borer",
+    "problem_scientific_name": "Scirpophaga incertulas",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "stem borer",
+      "kuruthu poochi",
+      "குருத்துப்பூச்சி",
+      "தண்டு துளைப்பான்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Cartap Hydrochloride",
+    "formulation": "SP",
+    "concentration": "50% SP",
+    "dose": 2.0,
+    "dose_unit": "g/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 21,
+    "brand_names": [
+      "Padan",
+      "Caldan"
+    ],
+    "instructions_en": "Foliar spray at ETL. Mix 400 g/acre in 200 liters of water.",
+    "instructions_ta": "நெல் குருத்துப்பூச்சி: கார்டாப் ஹைட்ரோகுளோரைடு 50% SP மருந்தை ஏக்கருக்கு 400 கிராம் (2.0 கிராம்/லிட்டர்) வீதம் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024 (Paddy, p.15): Cartap hydrochloride 50% SP @ 2.0 g/l or 400 g/acre in 200 L water against Yellow Stem Borer.",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-PADDY-003",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Paddy (Rice)",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 2.1 - Rice Blast Disease Management, Page 22",
+    "crop": "Paddy",
+    "crop_id": "paddy",
+    "crop_scientific_name": "Oryza sativa",
+    "crop_aliases": [
+      "rice",
+      "nellu",
+      "nel",
+      "நெல்"
+    ],
+    "target_problem": "Rice Blast",
+    "problem_scientific_name": "Pyricularia oryzae",
+    "problem_category": "disease",
+    "problem_aliases": [
+      "blast",
+      "leaf blast",
+      "neck blast",
+      "குலை நோய்",
+      "குலைநோய்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Tricyclazole",
+    "formulation": "WP",
+    "concentration": "75% WP",
+    "dose": 0.6,
+    "dose_unit": "g/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 30,
+    "brand_names": [
+      "Beam",
+      "Baan"
+    ],
+    "instructions_en": "Spray at initial disease appearance. Repeat after 10-15 days if conditions favor disease development.",
+    "instructions_ta": "நெல் குலை நோய் கட்டுப்பாடு: ட்ரைசைக்ளசோல் 75% WP மருந்தை ஏக்கருக்கு 120 கிராம் (0.6 கிராம்/லிட்டர்) வீதம் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024: Rice Blast (Pyricularia oryzae) - Spray Tricyclazole 75% WP @ 0.6 g/l (120 g/acre) at initial symptom detection.",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-PADDY-004",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Paddy (Rice)",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 1.4 - Brown Planthopper Management, Page 18",
+    "crop": "Paddy",
+    "crop_id": "paddy",
+    "crop_scientific_name": "Oryza sativa",
+    "crop_aliases": [
+      "rice",
+      "nellu",
+      "nel",
+      "நெல்"
+    ],
+    "target_problem": "Brown Planthopper",
+    "problem_scientific_name": "Nilaparvata lugens",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "bph",
+      "plant hopper",
+      "pugaiyan",
+      "புகையான்",
+      "புகையான் பூச்சி"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Buprofezin",
+    "formulation": "SC",
+    "concentration": "25% SC",
+    "dose": 1.6,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 20,
+    "brand_names": [
+      "Applaud"
+    ],
+    "instructions_en": "Direct the spray to the basal portion of the rice plant when ETL of 1 hopper/tiller is observed.",
+    "instructions_ta": "நெல் புகையான் பூச்சி தாக்குதல்: பப்ரோஃபெசின் 25% SC மருந்தை ஏக்கருக்கு 320 மிலி (1.6 மிலி/லிட்டர்) வீதம் தூர்களின் அடிப்பகுதியில் படுமாறு தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024: Brown Planthopper (Nilaparvata lugens) - Spray Buprofezin 25% SC @ 1.6 ml/l or 320 ml/acre towards the base of hill.",
+    "evidence_status": "VERIFIED"
+  }
+]

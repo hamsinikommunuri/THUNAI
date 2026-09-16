@@ -1,0 +1,125 @@
+[
+  {
+    "document_id": "DOC-TNAU-CHILLI-001",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Vegetables: Chilli",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 5.1 - Chilli Thrips Management, Page 104",
+    "crop": "Chilli",
+    "crop_id": "chilli",
+    "crop_scientific_name": "Capsicum annuum",
+    "crop_aliases": [
+      "chili",
+      "milagai",
+      "mirchi",
+      "மிளகாய்"
+    ],
+    "target_problem": "Chilli Thrips",
+    "problem_scientific_name": "Scirtothrips dorsalis",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "thrips",
+      "leaf curl",
+      "murungai noi",
+      "ilai pean",
+      "இலைப்பேன்",
+      "இலை பேன்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Spinetoram",
+    "formulation": "SC",
+    "concentration": "11.7% SC",
+    "dose": 1.0,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 160.0,
+    "waiting_period_days": 3,
+    "brand_names": [
+      "Delegate"
+    ],
+    "instructions_en": "Spray Spinetoram 11.7% SC @ 1.0 ml/l (160 ml/acre) upon noticing upward curling of leaves.",
+    "instructions_ta": "மிளகாய் இலைப்பேன் கட்டுப்பாடு: ஸ்பினடோரம் 11.7% SC மருந்தை லிட்டருக்கு 1.0 மிலி (ஏக்கருக்கு 160 மிலி) வீதம் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024 (Chilli, p.104): Chilli thrips (Scirtothrips dorsalis) - Spray Spinetoram 11.7% SC @ 1.0 ml/l (160 ml/acre).",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-CIBRC-CHILLI-002",
+    "source_id": "CIBRC_REGISTRY_2024",
+    "source_title": "CIBRC Major Uses of Pesticides - Chilli",
+    "publication_date": "2024-01-01",
+    "page_or_section": "Approved Pesticide Formulations for Chilli, Page 312",
+    "crop": "Chilli",
+    "crop_id": "chilli",
+    "crop_scientific_name": "Capsicum annuum",
+    "crop_aliases": [
+      "chili",
+      "milagai",
+      "மிளகாய்"
+    ],
+    "target_problem": "Chilli Thrips",
+    "problem_scientific_name": "Scirtothrips dorsalis",
+    "problem_category": "pest",
+    "problem_aliases": [
+      "thrips",
+      "sucking pest",
+      "இலைப்பேன்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Fipronil",
+    "formulation": "SC",
+    "concentration": "5% SC",
+    "dose": 2.0,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 7,
+    "brand_names": [
+      "Regent"
+    ],
+    "instructions_en": "Spray Fipronil 5% SC @ 2.0 ml/l (400 ml/acre) at ETL threshold.",
+    "instructions_ta": "மிளகாய் இலைப்பேன் மற்றும் சுருட்டை: பிப்ரோனில் 5% SC மருந்தை லிட்டருக்கு 2.0 மிலி வீதம் தெளிக்கவும்.",
+    "raw_source_text": "CIBRC Major Uses 2024 (p.312): Fipronil 5% SC registered for Chilli thrips and aphids @ 2 ml/l (400 ml/acre).",
+    "evidence_status": "VERIFIED"
+  },
+  {
+    "document_id": "DOC-TNAU-CHILLI-003",
+    "source_id": "TNAU_CPG_2024",
+    "source_title": "TNAU Crop Protection Guide - Vegetables: Chilli",
+    "publication_date": "2024-01-15",
+    "page_or_section": "Section 5.3 - Anthracnose / Fruit Rot Management, Page 108",
+    "crop": "Chilli",
+    "crop_id": "chilli",
+    "crop_scientific_name": "Capsicum annuum",
+    "crop_aliases": [
+      "chili",
+      "milagai",
+      "மிளகாய்"
+    ],
+    "target_problem": "Anthracnose",
+    "problem_scientific_name": "Colletotrichum capsici",
+    "problem_category": "disease",
+    "problem_aliases": [
+      "fruit rot",
+      "die-back",
+      "dieback",
+      "காய் அழுகல்",
+      "நுனி கருகல்"
+    ],
+    "recommendation_type": "chemical",
+    "active_ingredient": "Azoxystrobin",
+    "formulation": "SC",
+    "concentration": "23% SC",
+    "dose": 1.0,
+    "dose_unit": "ml/l",
+    "application_basis": "foliar_spray",
+    "water_volume_l_per_acre": 200.0,
+    "waiting_period_days": 5,
+    "brand_names": [
+      "Amistar"
+    ],
+    "instructions_en": "Spray Azoxystrobin 23% SC @ 1.0 ml/l (200 ml/acre) at first detection of necrotic spots on ripe pods.",
+    "instructions_ta": "மிளகாய் காய் அழுகல் மற்றும் நுனிகருகல் நோய்: அசோக்சிஸ்ட்ரோபின் 23% SC மருந்தை லிட்டருக்கு 1 மிலி வீதம் தெளிக்கவும்.",
+    "raw_source_text": "TNAU CPG 2024: Chilli Anthracnose / Die-back (Colletotrichum capsici) - Spray Azoxystrobin 23% SC @ 1 ml/l.",
+    "evidence_status": "VERIFIED"
+  }
+]
