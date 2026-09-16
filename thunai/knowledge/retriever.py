@@ -89,7 +89,8 @@ class HybridEvidenceRetriever:
             target_crop_id = context.crop_id.lower().strip()
         elif context and context.crop:
             norm = normalize_crop(context.crop)
-            target_crop_id = norm.crop_id if norm.is_known else None
+            target_crop_id = norm.crop_id if norm else None
+
 
         if not target_crop_id:
             resolved = resolve_crop(query)

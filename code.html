@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#080B0A] text-[#F4F1E8] antialiased selection:bg-[#5FCB87]/30 selection:text-white" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THUNAI — Field Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#080B0A',
+            charcoal: '#0E1210',
+            carbon: '#141A17',
+            mineral: '#F4F1E8',
+            'mineral-muted': '#969B95',
+            emerald: {
+              DEFAULT: '#5FCB87',
+              bright: '#7CE8A1',
+              deep: '#143122',
+              glow: 'rgba(95, 203, 135, 0.18)'
+            },
+            sunlight: '#E7C66B',
+            alert: {
+              amber: '#F59E0B',
+              danger: '#EF4444'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    /* Sleek custom scrollbars */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 9999px; }
+    
+    /* Living subtle waveform animation */
+    @keyframes bar-pulse {
+      0%, 100% { height: 6px; opacity: 0.6; }
+      50% { height: 18px; opacity: 1; }
+    }
+    .wave-bar-1 { animation: bar-pulse 1.8s ease-in-out infinite; }
+    .wave-bar-2 { animation: bar-pulse 1.8s ease-in-out 0.2s infinite; }
+    .wave-bar-3 { animation: bar-pulse 1.8s ease-in-out 0.4s infinite; }
+    .wave-bar-4 { animation: bar-pulse 1.8s ease-in-out 0.6s infinite; }
+
+    @keyframes soundwave-active {
+      0%, 100% { transform: scaleY(0.35); }
+      50% { transform: scaleY(1.4); }
+    }
+    .voice-morph-bar {
+      animation: soundwave-active 1.4s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    /* Living Field Surface styling */
+    .field-lens {
+      background: radial-gradient(110% 120% at 50% 0%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 55%, rgba(0, 0, 0, 0.45) 100%);
+      box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16), 0 12px 32px -10px rgba(0, 0, 0, 0.85);
+    }
+    .field-lens:hover {
+      box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, 0.25), 0 16px 36px -8px rgba(0, 0, 0, 0.95), 0 0 30px -8px rgba(95, 203, 135, 0.2);
+    }
+
+    /* Laser scanline for optical diagnosis */
+    @keyframes optical-sweep {
+      0% { top: 6%; opacity: 0; }
+      20% { opacity: 0.9; }
+      80% { opacity: 0.9; }
+      100% { top: 92%; opacity: 0; }
+    }
+    .optical-scanner {
+      animation: optical-sweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    /* Illuminated node pulse */
+    @keyframes node-breathe {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(95, 203, 135, 0.45); }
+      50% { box-shadow: 0 0 0 7px rgba(95, 203, 135, 0); }
+    }
+    .pulse-glow {
+      animation: node-breathe 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    /* Screen panel visibility */
+    .screen-panel {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .screen-panel.active {
+      display: flex;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#080B0A] text-[#F4F1E8] font-sans flex flex-col items-center justify-start py-8 px-4 relative overflow-x-hidden">
+<!-- Ambient Backdrop Atmosphere -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[500px] bg-gradient-to-b from-[#5FCB87]/8 via-[#143122]/5 to-transparent blur-[140px] rounded-full"></div>
+<div class="absolute -bottom-40 right-[-10%] w-[620px] h-[620px] bg-gradient-to-t from-[#E7C66B]/5 via-transparent to-transparent blur-[160px] rounded-full"></div>
+<div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] [background-size:24px_24px] opacity-35"></div>
+</div>
+<!-- Ultra-Minimal Chapter Floating Control Bar -->
+<header class="relative z-30 w-full max-w-4xl mb-7 flex flex-col items-center gap-3">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-emerald-bright/80 uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald animate-pulse"></span>
+      THUNAI · FIELD INTELLIGENCE WALKTHROUGH
+    </div>
+<nav class="flex items-center gap-1 overflow-x-auto max-w-full p-1.5 bg-[#0E1210]/90 backdrop-blur-2xl rounded-full border border-white/[0.08] shadow-2xl" id="nav-chapters">
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium rounded-full transition-all bg-emerald text-obsidian font-semibold shadow-sm whitespace-nowrap" id="tab-home" onclick="switchChapter('home')">1. Home</button>
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium text-mineral-muted hover:text-mineral rounded-full transition-all whitespace-nowrap" id="tab-field-morph" onclick="switchChapter('field-morph')">2. THUNAI Field</button>
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium text-mineral-muted hover:text-mineral rounded-full transition-all whitespace-nowrap" id="tab-diagnosis" onclick="switchChapter('diagnosis')">3. Crop Vision</button>
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium text-mineral-muted hover:text-mineral rounded-full transition-all whitespace-nowrap" id="tab-result" onclick="switchChapter('result')">4. Action Narrative</button>
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium text-mineral-muted hover:text-mineral rounded-full transition-all whitespace-nowrap" id="tab-doselock" onclick="switchChapter('doselock')">5. Dose Lock</button>
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium text-mineral-muted hover:text-mineral rounded-full transition-all whitespace-nowrap" id="tab-weather" onclick="switchChapter('weather')">6. Weather Shift</button>
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium text-mineral-muted hover:text-mineral rounded-full transition-all whitespace-nowrap" id="tab-trace" onclick="switchChapter('trace')">7. Evidence Trace</button>
+<button class="tab-btn px-3.5 py-1.5 text-[12px] font-medium text-mineral-muted hover:text-mineral rounded-full transition-all whitespace-nowrap" id="tab-expert" onclick="switchChapter('expert')">8. Second Opinion</button>
+</nav>
+</header>
+<!-- High-Fidelity Mobile Canvas Chassis (390px x 844px actual physical viewport ratio) -->
+<main class="relative z-20 w-[390px] h-[844px] rounded-[52px] bg-[#0A0D0B] border-[6px] border-[#1A201C] shadow-[0_35px_100px_-20px_rgba(0,0,0,0.98),0_0_0_1px_rgba(255,255,255,0.06)] overflow-hidden flex flex-col justify-between select-none">
+<!-- Realistic Dynamic Sensor Island & Status Bar -->
+<div class="relative z-40 pt-3 px-7 flex items-center justify-between text-xs text-mineral/70 font-medium">
+<span class="text-[13px] font-semibold tracking-tight">09:41</span>
+<div class="w-24 h-[22px] bg-obsidian rounded-full flex items-center justify-center gap-2 border border-white/[0.05]">
+<span class="w-2.5 h-2.5 rounded-full bg-[#131915] border border-white/5"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald/60"></span>
+</div>
+<div class="flex items-center gap-1.5 text-[11px]">
+<span class="material-symbols-outlined text-[15px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[15px]">wifi</span>
+<span class="material-symbols-outlined text-[15px] rotate-90">battery_full</span>
+</div>
+</div>
+<!-- DEVICE VIEWPORT CONTENT WRAPPER -->
+<div class="relative flex-1 overflow-hidden flex flex-col justify-between">
+<!-- ================= CHAPTER 1: HOME (FLAGSHIP RE-ART-DIRECTION) ================= -->
+<section class="screen-panel active flex-1 flex-col justify-between px-6 pt-3 pb-3 overflow-y-auto" id="chapter-home">
+<!-- Header: Clean mark + THUNAI on left, Coimbatore · 29° on right. Zero debug badges -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-carbon border border-white/10 flex items-center justify-center p-1 shadow-sm">
+<img alt="THUNAI Mark" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5RzkokFuMt84EUvZETSAhUCsYqZjDWH7VLyEpaVj4F10rE6PmPt_u2q2zX06d0oyQqdH7cDeypTRHqrNdqt4WPWmusNd2lA9lYdbvdvx-RKCoCbdsfMzAxT8jIfnqiFvuZ25qNpTdycMaxj8lNrRSwIGgaMCg56P1xlqbEGzHlwlLEe54kxaM5oFtsS1Leig-RUJo4C08ZJjexOcMPU9PhRL8YQyK_gjqf5DKOezLMtx6x4B-Sf75aW0"/>
+</div>
+<span class="text-sm font-semibold tracking-[0.24em] text-mineral uppercase">THUNAI</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-mineral-muted font-normal">
+<span>Coimbatore</span>
+<span class="text-white/20">·</span>
+<span class="text-mineral font-medium">29°</span>
+</div>
+</div>
+<!-- Cinematic Agriculture: Occupies ~35% with organic gradient vignette into obsidian -->
+<div class="relative my-3 w-full h-[230px] rounded-3xl overflow-hidden border border-white/[0.08] group">
+<img alt="Morning Mist on Farm Furrows" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1UMbPjZIvtrz8IRGgq-K9almijyei22Aad_6mWHy8V92MR9TU8RF9RxOoaw1MOj-j4nSQ2CQLRPsz92hV0DhzDr-Bucjkz9yY2e7MTNsJNfc9kyPeBctRj0CbOqhB7qIJBHT4xHqchJnsY-XphPuMcz1F3ajceJhWuycDTx5hHgfDvibfb6Mc1zVobhnNAMTL0AkFt68s-eyRuEYMfrZ6dGlckrvJIFksxTm659H6wZqE5yvfhtQISlVug"/>
+<!-- Seamless organic obsidian dissolution -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#0A0D0B] via-[#0A0D0B]/20 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0A0D0B]/50 via-transparent to-transparent"></div>
+<!-- Bottom subtle photo metadata badge -->
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between">
+<div>
+<span class="text-[10px] tracking-[0.22em] font-mono text-emerald uppercase font-medium">Plot 4B · Shivam F1</span>
+<p class="text-[11px] text-mineral/80 font-serif italic mt-0.5">Dew evaporating · Root zone 68%</p>
+</div>
+<div class="w-7 h-7 rounded-full bg-obsidian/60 backdrop-blur-md border border-white/10 flex items-center justify-center text-emerald">
+<span class="material-symbols-outlined text-sm">spa</span>
+</div>
+</div>
+</div>
+<!-- Editorial Typography -->
+<div class="space-y-1 pt-1">
+<p class="text-[11px] font-mono tracking-[0.28em] text-emerald uppercase font-semibold">GOOD MORNING</p>
+<h1 class="text-[40px] leading-[1.04] font-bold text-mineral tracking-tight font-sans">
+            What does your crop need today?
+          </h1>
+<p class="text-xs text-mineral-muted pt-1">
+            Speak, show me a crop, or ask anything.
+          </p>
+</div>
+<!-- THE THUNAI FIELD — Proprietary Unified Living Surface -->
+<!-- 4-Crop Agricultural Filter Selector -->
+<div class="pt-2 flex items-center justify-between">
+  <span class="text-[10px] font-mono tracking-[0.2em] text-emerald uppercase font-semibold">CROP ISOLATION (PHASE 1)</span>
+  <span class="text-[10px] font-mono text-mineral-muted" id="selected-crop-label">தக்காளி · Tomato</span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 text-[11px] font-mono no-scrollbar" id="crop-selector">
+  <button type="button" onclick="selectCrop('paddy')" id="crop-chip-paddy" class="crop-chip px-3 py-1 rounded-full border border-white/10 bg-white/5 text-mineral hover:border-emerald transition-all shrink-0">🌾 நெல் (Paddy)</button>
+  <button type="button" onclick="selectCrop('tomato')" id="crop-chip-tomato" class="crop-chip px-3 py-1 rounded-full border border-emerald/50 bg-emerald/20 text-emerald-bright font-semibold transition-all shrink-0">🍅 தக்காளி (Tomato)</button>
+  <button type="button" onclick="selectCrop('banana')" id="crop-chip-banana" class="crop-chip px-3 py-1 rounded-full border border-white/10 bg-white/5 text-mineral hover:border-emerald transition-all shrink-0">🍌 வாழை (Banana)</button>
+  <button type="button" onclick="selectCrop('chilli')" id="crop-chip-chilli" class="crop-chip px-3 py-1 rounded-full border border-white/10 bg-white/5 text-mineral hover:border-emerald transition-all shrink-0">🌶️ மிளகாய் (Chilli)</button>
+</div>
+
+<!-- Test Scenarios Bar -->
+<div class="pt-1 flex items-center gap-1.5 overflow-x-auto text-[10px] font-mono text-mineral-muted no-scrollbar">
+  <span class="text-emerald text-[9px] uppercase font-semibold shrink-0">LIVE DEMO:</span>
+  <button type="button" onclick="runScenario('நெல் குருத்துப்பூச்சி மருந்து என்ன?', 'paddy')" class="px-2 py-0.5 rounded-lg bg-carbon border border-white/10 hover:border-emerald shrink-0 text-mineral/90">🌾 Paddy Stem Borer</button>
+  <button type="button" onclick="runScenario('tomato early blight mancozeb spray', 'tomato')" class="px-2 py-0.5 rounded-lg bg-carbon border border-white/10 hover:border-emerald shrink-0 text-mineral/90">🍅 Tomato Early Blight</button>
+  <button type="button" onclick="runScenario('வாழை சிகாடோகா இலைப்புள்ளி ப்ரோபிகோனசோல்', 'banana')" class="px-2 py-0.5 rounded-lg bg-carbon border border-white/10 hover:border-emerald shrink-0 text-mineral/90">🍌 Banana Sigatoka</button>
+  <button type="button" onclick="runScenario('மிளகாய் இலைப்பேன் ஸ்பினடோரம் அளவு', 'chilli')" class="px-2 py-0.5 rounded-lg bg-carbon border border-white/10 hover:border-emerald shrink-0 text-mineral/90">🌶️ Chilli Thrips</button>
+  <button type="button" onclick="runScenario('தக்காளிக்கு மோனோகுரோட்டோபாஸ் அடிக்கலாமா?', 'tomato', 'Monocrotophos')" class="px-2 py-0.5 rounded-lg bg-red-950/40 border border-red-500/50 text-red-300 hover:border-red-400 shrink-0 font-medium">⚠️ Banned Chemical Test</button>
+</div>
+
+<!-- THE THUNAI FIELD — Proprietary Unified Living Surface -->
+<div class="mt-3 relative">
+<div class="field-lens cursor-pointer relative w-full h-[66px] rounded-[24px] border border-white/[0.12] px-4 flex items-center justify-between transition-all duration-300" onclick="switchChapter('field-morph')">
+<!-- Left Voice Affordance with Harmonic 4-Bar Waveform -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-emerald shadow-inner">
+<span class="material-symbols-outlined text-lg">mic</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-mineral/90">Ask THUNAI</span>
+<!-- Subtle Living 4-Bar Emerald Waveform -->
+<div class="flex items-center gap-[3px] h-3 mt-1">
+<span class="w-[3px] bg-emerald rounded-full wave-bar-1"></span>
+<span class="w-[3px] bg-emerald/80 rounded-full wave-bar-2"></span>
+<span class="w-[3px] bg-emerald-bright rounded-full wave-bar-3"></span>
+<span class="w-[3px] bg-emerald/60 rounded-full wave-bar-4"></span>
+</div>
+</div>
+</div>
+<!-- Right Discreet Camera Lens Aperture -->
+<div class="flex items-center">
+<button class="w-10 h-10 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 flex items-center justify-center text-mineral-muted hover:text-mineral transition-colors" onclick="event.stopPropagation(); switchChapter('diagnosis')">
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Proactive Weather Shift Insight Strip -->
+<div class="cursor-pointer mt-3 pt-3 pb-1 border-t border-white/[0.06] flex items-center justify-between group" onclick="switchChapter('weather')">
+<div class="space-y-0.5 max-w-[270px]">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-alert-amber animate-pulse"></span>
+<span class="text-[10px] font-mono tracking-wider uppercase text-alert-amber font-medium">WEATHER SHIFT</span>
+<span class="text-[11px] text-mineral-muted">· Rain expected after 5:10 PM</span>
+</div>
+<p class="text-[11px] text-mineral/80 font-normal leading-snug">
+              If you're planning to spray, the next few hours are safer.
+            </p>
+</div>
+<span class="text-xs text-emerald font-medium group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5">
+            Reasoning <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</section>
+<!-- ================= CHAPTER 2: THUNAI FIELD MORPH (ACTIVE VOICE & MORPH) ================= -->
+<section class="screen-panel flex-1 flex-col justify-between px-6 pt-3 pb-4 overflow-y-auto" id="chapter-field-morph">
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-mineral" onclick="switchChapter('home')">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<span class="text-xs font-mono tracking-widest text-emerald uppercase font-medium">FIELD MORPH</span>
+<div class="w-8"></div>
+</div>
+<div class="my-auto space-y-6">
+<div class="text-center space-y-1">
+<span class="text-[10px] font-mono tracking-[0.25em] text-emerald uppercase">LISTENING WITH ATTUNEMENT</span>
+<h2 class="text-2xl font-bold text-mineral tracking-tight">Speak freely about your field</h2>
+</div>
+<!-- The Morphed Living Surface -->
+<div class="field-lens relative w-full rounded-[32px] p-6 border border-emerald/30 shadow-[0_0_50px_-15px_rgba(95,203,135,0.2)] space-y-6">
+<!-- Breathing Soundwave Array -->
+<div class="flex items-center justify-center gap-1.5 h-16">
+<span class="w-1.5 bg-emerald/50 rounded-full voice-morph-bar h-6" style="animation-delay: 0.1s"></span>
+<span class="w-1.5 bg-emerald rounded-full voice-morph-bar h-10" style="animation-delay: 0.3s"></span>
+<span class="w-1.5 bg-emerald-bright rounded-full voice-morph-bar h-14" style="animation-delay: 0.0s"></span>
+<span class="w-1.5 bg-emerald rounded-full voice-morph-bar h-9" style="animation-delay: 0.4s"></span>
+<span class="w-1.5 bg-emerald-bright rounded-full voice-morph-bar h-16" style="animation-delay: 0.2s"></span>
+<span class="w-1.5 bg-emerald rounded-full voice-morph-bar h-11" style="animation-delay: 0.5s"></span>
+<span class="w-1.5 bg-emerald/60 rounded-full voice-morph-bar h-5" style="animation-delay: 0.25s"></span>
+</div>
+<!-- Dynamic Live Transcription & Interactive Input -->
+<div class="bg-obsidian/70 rounded-2xl p-4 border border-white/[0.06] text-center space-y-2">
+<input type="text" id="morph-query-input" class="w-full bg-transparent border-b border-emerald/40 text-[14px] text-mineral font-serif italic text-center focus:outline-none focus:border-emerald pb-1.5" value="தக்காளி இலையில கருப்பு வளையம் மாதிரி புள்ளி இருக்கு..." placeholder="வார்த்தைகளை தட்டச்சு செய்யவும் / Type query..." onkeydown="if(event.key==='Enter') submitFromInput()" />
+<div class="flex items-center justify-center gap-1.5 text-[10px] font-mono tracking-wider text-mineral-muted uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald"></span>
+<span id="morph-context-text">Context: Tomato · Coimbatore</span>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex items-center justify-center gap-3 pt-1">
+<button class="px-5 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-xs text-mineral font-medium transition-colors" onclick="switchChapter('home')">
+                Cancel
+              </button>
+<button class="px-6 py-2.5 rounded-full bg-emerald text-obsidian font-semibold text-xs flex items-center gap-1.5 shadow-lg shadow-emerald/20" onclick="submitFromInput()">
+<span>Run Diagnosis</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="text-center pb-2">
+<p class="text-[11px] text-mineral-muted">Voice model calibrated for regional agronomic terminology.</p>
+</div>
+</section>
+<!-- ================= CHAPTER 3: CROP VISION (OPTICAL ANALYSIS) ================= -->
+<section class="screen-panel flex-1 flex-col justify-between px-6 pt-3 pb-4 overflow-y-auto" id="chapter-diagnosis">
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-mineral" onclick="switchChapter('home')">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<span class="text-xs font-mono tracking-widest text-emerald uppercase font-medium">CROP VISION</span>
+<div class="w-8"></div>
+</div>
+<!-- Edge-to-Edge Macro Leaf Inspection Viewport -->
+<div class="relative my-2 w-full h-[380px] rounded-[32px] overflow-hidden border border-white/[0.12] shadow-2xl">
+<img alt="Tomato Early Blight Inspection" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XEuA6lTQkh8P8A9JagyP3OmE-gQP_auQJ1UYFgM5W1HFDRypC6Pw0Cly4dRCwSWxNiNJk5xs-P-S_0fXT4QL4ogVEmTHhyHMjr96l7cuySQE-fvg4f09by0ONE0e5SRtR09Qi_6rbo6yxN7qk8IepLrIUXHSlOOLlvs2x-LucThd731z8_g9tDWiTMWNF9q_X3_veSSlmh6ktILldumAHax_drTFHkT-nSlm7uF0NLsd1sxK7dfJ6bNA"/>
+<!-- Optical Laser Sweep -->
+<div class="optical-scanner absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-emerald to-transparent shadow-[0_0_8px_#5FCB87]"></div>
+<!-- Luminous Contour Tracing Anchor on Lesion Target Rings -->
+<div class="absolute top-[48%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border border-emerald/60 bg-emerald/15 backdrop-blur-[0.5px] animate-pulse flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-sunlight shadow-[0_0_10px_#E7C66B]"></span>
+</div>
+<!-- Minimalist Observation Tag -->
+<div class="absolute top-4 right-4 bg-obsidian/85 backdrop-blur-xl border border-white/15 px-3 py-1.5 rounded-xl shadow-xl">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald"></span>
+<span id="vision-pathogen-scientific" class="text-[11px] font-mono text-mineral tracking-wider uppercase font-semibold">Alternaria solani</span>
+</div>
+<span id="vision-pathogen-desc" class="text-[10px] text-mineral-muted block">Concentric ring necrosis</span>
+</div>
+<!-- Biological Context Chip -->
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-obsidian/75 backdrop-blur-md rounded-2xl px-4 py-2.5 border border-white/[0.08]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald text-base">eco</span>
+<span id="vision-crop-name" class="text-xs text-mineral font-medium">Tomato (Solanum lycopersicum)</span>
+</div>
+<span id="vision-confidence" class="text-[11px] font-mono text-sunlight font-medium">Optical Match 94%</span>
+</div>
+</div>
+<!-- Inspection Next Steps -->
+<div class="space-y-3 pt-1">
+<div>
+<h3 class="text-base font-semibold text-mineral">Pathogen Morphology Isolated</h3>
+<p class="text-xs text-mineral-muted">Visual symptoms match standard early blight foliar pattern.</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] text-xs font-medium text-mineral transition-colors" onclick="switchChapter('home')">
+              Retake Image
+            </button>
+<button class="py-3 rounded-2xl bg-emerald hover:bg-emerald-bright text-obsidian text-xs font-semibold shadow-lg shadow-emerald/20 transition-colors" onclick="switchChapter('result')">
+              Action Narrative
+            </button>
+</div>
+</div>
+</section>
+<!-- ================= CHAPTER 4: ACTION NARRATIVE (NO BOX CLUTTER) ================= -->
+<section class="screen-panel flex-1 flex-col justify-between px-6 pt-3 pb-4 overflow-y-auto" id="chapter-result">
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-mineral" onclick="switchChapter('diagnosis')">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<span class="text-xs font-mono tracking-widest text-emerald uppercase font-medium">ACTION NARRATIVE</span>
+<button class="text-xs font-medium text-emerald hover:underline" onclick="switchChapter('trace')">
+            Trace →
+          </button>
+</div>
+<!-- Editorial Structure -->
+<div class="my-3 space-y-4">
+<!-- Identification Header -->
+<div class="border-b border-white/[0.06] pb-3">
+<span class="text-[10px] font-mono tracking-[0.25em] text-emerald uppercase font-semibold">DIAGNOSIS</span>
+<h2 id="action-diagnosis-name" class="text-2xl font-bold text-mineral tracking-tight">Early Blight</h2>
+<div class="flex items-center gap-2 mt-1">
+<span id="action-scientific-name" class="text-xs text-mineral-muted font-serif italic">Alternaria solani</span>
+<span class="text-white/20">·</span>
+<span class="text-[11px] font-mono text-emerald-bright">Likely match</span>
+</div>
+</div>
+<!-- What to Do Now (Priority Physical Interventions) -->
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<h3 class="text-xs font-mono tracking-widest uppercase text-mineral font-semibold">WHAT TO DO NOW</h3>
+<span class="text-[10px] text-mineral-muted font-mono">Immediate</span>
+</div>
+<!-- Action 1 -->
+<div class="py-2.5 border-b border-white/[0.05] flex items-start gap-3">
+<span class="w-5 h-5 rounded-full bg-emerald/15 text-emerald text-[11px] font-mono font-bold flex items-center justify-center mt-0.5">1</span>
+<div>
+<p class="text-sm font-medium text-mineral">Prune lower infected foliage</p>
+<p class="text-xs text-mineral-muted mt-0.5 leading-snug">Clip lower leaves touching wet soil to arrest spore splashback onto stems.</p>
+</div>
+</div>
+<!-- Action 2 -->
+<div class="py-2.5 border-b border-white/[0.05] flex items-start gap-3">
+<span class="w-5 h-5 rounded-full bg-emerald/15 text-emerald text-[11px] font-mono font-bold flex items-center justify-center mt-0.5">2</span>
+<div>
+<p class="text-sm font-medium text-mineral">Avoid overhead irrigation</p>
+<p class="text-xs text-mineral-muted mt-0.5 leading-snug">Irrigate at root zone via drip or furrow; fungal spores thrive on wet leaf cuticles.</p>
+</div>
+</div>
+<!-- Action 3 -->
+<div class="py-2.5 flex items-start gap-3">
+<span class="w-5 h-5 rounded-full bg-emerald/15 text-emerald text-[11px] font-mono font-bold flex items-center justify-center mt-0.5">3</span>
+<div>
+<p class="text-sm font-medium text-mineral">Sanitize shears after cuts</p>
+<p class="text-xs text-mineral-muted mt-0.5 leading-snug">Wipe cutting blades with 70% isopropyl alcohol between tomato plants.</p>
+</div>
+</div>
+</div>
+<!-- Dose Lock Gate Card -->
+<div class="cursor-pointer field-lens p-4 rounded-3xl border border-emerald/30 hover:border-emerald transition-all flex items-center justify-between group" onclick="switchChapter('doselock')">
+<div class="space-y-0.5">
+<span class="text-[10px] font-mono tracking-widest uppercase text-emerald font-semibold">TREATMENT AUTHORIZATION</span>
+<p id="action-chem-name" class="text-sm font-semibold text-mineral">Mancozeb 75% WP</p>
+<p id="action-chem-status" class="text-xs text-mineral-muted">Dose ceremony verification required</p>
+</div>
+<div class="w-9 h-9 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-emerald group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">lock_open</span>
+</div>
+</div>
+</div>
+<div class="pt-1 border-t border-white/[0.06] flex items-center justify-between text-xs">
+<button class="text-mineral-muted hover:text-emerald transition-colors" onclick="switchChapter('trace')">
+            Inspect Evidence Trace
+          </button>
+<button class="text-emerald font-medium" onclick="switchChapter('expert')">
+            Second Opinion?
+          </button>
+</div>
+</section>
+<!-- ================= CHAPTER 5: DOSE LOCK CEREMONY ================= -->
+<section class="screen-panel flex-1 flex-col justify-between px-6 pt-3 pb-4 overflow-y-auto" id="chapter-doselock">
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-mineral" onclick="switchChapter('result')">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<span class="text-xs font-mono tracking-widest text-emerald uppercase font-medium">DOSE LOCK CEREMONY</span>
+<div class="w-8"></div>
+</div>
+<div class="my-auto space-y-5">
+<!-- Verification Sequence -->
+<div class="space-y-2 px-1">
+<div class="flex items-center justify-between text-[11px] font-mono text-mineral-muted">
+<span>Crop matched</span>
+<span id="dose-crop-val" class="text-emerald flex items-center gap-1 font-semibold">● Solanum lycopersicum</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-mineral-muted">
+<span>Problem verified</span>
+<span id="dose-problem-val" class="text-emerald flex items-center gap-1 font-semibold">● Early Blight</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-mineral-muted">
+<span>Active ingredient</span>
+<span id="dose-ai-val" class="text-emerald flex items-center gap-1 font-semibold">● Mancozeb 75% WP</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-mineral-muted">
+<span>Regulatory status</span>
+<span id="dose-status-val" class="text-emerald flex items-center gap-1 font-semibold">● Dose locked</span>
+</div>
+</div>
+<!-- Illuminated Dose Monolith -->
+<div class="relative rounded-[36px] bg-gradient-to-b from-carbon to-obsidian border-2 border-emerald/40 p-6 text-center shadow-[0_0_80px_-20px_rgba(95,203,135,0.35)]">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald/15 border border-emerald/30 text-emerald-bright text-[10px] font-mono uppercase font-semibold mb-2">
+<span class="material-symbols-outlined text-sm">shield</span>
+<span>VERIFIED DOSE</span>
+</div>
+<!-- The Heroic Number -->
+<div class="py-1">
+<span id="dose-amount-val" class="text-6xl font-extrabold text-mineral tracking-tight font-sans">2.0</span>
+<span id="dose-unit-val" class="text-2xl font-semibold text-emerald ml-1">g / L</span>
+</div>
+<p id="dose-product-name" class="text-base font-semibold text-mineral mt-1">Mancozeb 75% WP</p>
+<p id="dose-basis-val" class="text-xs text-mineral-muted mt-0.5">Foliar spray · 500 L water/ha basis</p>
+<!-- Safety Covenant -->
+<div class="mt-4 pt-3.5 border-t border-white/[0.08] text-left">
+<p class="text-[11px] text-mineral-muted leading-relaxed">
+<strong class="text-mineral font-medium">THUNAI Safety Covenant:</strong> THUNAI will never guess or extrapolate pesticide dosage. Validated against official TNAU guidelines.
+              </p>
+</div>
+</div>
+<!-- Trace Trigger Button -->
+<button class="w-full py-3 rounded-2xl bg-white/[0.05] hover:bg-white/[0.09] border border-white/10 text-xs font-mono tracking-wider text-mineral uppercase font-medium transition-colors flex items-center justify-center gap-2" onclick="switchChapter('trace')">
+<span>Inspect Evidence Trace</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="text-center pb-2">
+<span id="dose-registry-id" class="text-[10px] text-mineral-muted font-mono">Registry: TNAU-CIB-2024-FOL-089</span>
+</div>
+</section>
+<!-- ================= CHAPTER 6: WEATHER SHIFT ================= -->
+<section class="screen-panel flex-1 flex-col justify-between px-6 pt-3 pb-4 overflow-y-auto" id="chapter-weather">
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-mineral" onclick="switchChapter('home')">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<span class="text-xs font-mono tracking-widest text-alert-amber uppercase font-medium">WEATHER SHIFT</span>
+<div class="w-8"></div>
+</div>
+<div class="my-auto space-y-5">
+<!-- Weather Atmospheric Card -->
+<div class="relative p-6 rounded-3xl bg-gradient-to-b from-[#0F1713] to-[#0A100E] border border-alert-amber/35 shadow-[0_0_60px_-15px_rgba(245,158,11,0.2)] space-y-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-alert-amber animate-ping"></span>
+<span class="text-xs font-mono tracking-widest uppercase text-alert-amber font-semibold">CAUTION LINE</span>
+</div>
+<div class="space-y-1">
+<h2 class="text-2xl font-bold text-mineral tracking-tight">Wait before spraying.</h2>
+<p class="text-sm text-mineral/85 font-serif italic leading-relaxed">
+                Rain is likely within the next 3 hours. Chemical wash-off will compromise treatment.
+              </p>
+</div>
+<!-- Environmental Indicators -->
+<div class="grid grid-cols-3 gap-2 pt-2 border-t border-white/[0.06] text-center">
+<div class="p-2 rounded-xl bg-obsidian/60">
+<span class="text-[9px] text-mineral-muted uppercase font-mono block">Precip</span>
+<span class="text-sm font-semibold text-mineral">82%</span>
+</div>
+<div class="p-2 rounded-xl bg-obsidian/60">
+<span class="text-[9px] text-mineral-muted uppercase font-mono block">Wind Gust</span>
+<span class="text-sm font-semibold text-mineral">19 km/h</span>
+</div>
+<div class="p-2 rounded-xl bg-obsidian/60">
+<span class="text-[9px] text-mineral-muted uppercase font-mono block">Humidity</span>
+<span class="text-sm font-semibold text-mineral">89%</span>
+</div>
+</div>
+</div>
+<!-- Optimal Window Recommendation -->
+<div class="p-5 rounded-3xl bg-carbon border border-emerald/30 space-y-2">
+<span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">RECOMMENDED APPLICATION WINDOW</span>
+<div class="flex items-center justify-between">
+<h4 class="text-base font-semibold text-mineral">Tomorrow · 6:30 AM – 9:30 AM</h4>
+<span class="text-xs text-emerald-bright font-mono">&lt; 12 km/h</span>
+</div>
+<p class="text-xs text-mineral-muted leading-relaxed">
+              If wind remains under 12 km/h, clear morning conditions will optimize foliar leaf cuticle adherence.
+            </p>
+</div>
+</div>
+<button class="w-full py-3.5 rounded-2xl bg-emerald text-obsidian text-xs font-semibold shadow-lg shadow-emerald/20 transition-all" onclick="switchChapter('home')">
+          Acknowledge Weather Advisory
+        </button>
+</section>
+<!-- ================= CHAPTER 7: EVIDENCE TRACE ================= -->
+<section class="screen-panel flex-1 flex-col justify-between px-6 pt-3 pb-4 overflow-y-auto" id="chapter-trace">
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-mineral" onclick="switchChapter('result')">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<span class="text-xs font-mono tracking-widest text-emerald uppercase font-medium">EVIDENCE TRACE</span>
+<div class="w-8"></div>
+</div>
+<div class="my-2 space-y-3">
+<div>
+<h2 class="text-xl font-bold text-mineral">Verifiable Reasoning Chain</h2>
+<p class="text-xs text-mineral-muted">Demonstrating clinical provenance behind recommendation.</p>
+</div>
+<!-- Vertical Illuminated Reasoning Chain -->
+<div id="evidence-trace-container" class="relative pl-6 space-y-4 border-l-2 border-emerald/30 ml-3 py-1">
+<!-- Step 1 -->
+<div class="relative">
+<span class="pulse-glow absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-emerald border-2 border-charcoal"></span>
+<div>
+<span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">01 · OBSERVATION</span>
+<p class="text-sm font-semibold text-mineral">Target-board concentric rings</p>
+<p class="text-xs text-mineral-muted">Lower foliage necrosis with chlorotic halo margin.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-emerald border-2 border-charcoal"></span>
+<div>
+<span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">02 · PATHOLOGY MATCH</span>
+<p class="text-sm font-semibold text-mineral">Alternaria solani (Early Blight)</p>
+<p class="text-xs text-mineral-muted">Pathogen visual match confidence validated.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-emerald border-2 border-charcoal"></span>
+<div>
+<span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">03 · TNAU 2024 CPG GUIDE</span>
+<p class="text-sm font-semibold text-mineral">Tamil Nadu Agricultural University</p>
+<p class="text-xs text-mineral-muted">CPG Vegetable Pathology · Section 14.3.2 protocol.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-emerald border-2 border-charcoal"></span>
+<div>
+<span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">04 · CIB&amp;RC CLEARANCE</span>
+<p class="text-sm font-semibold text-mineral">Mancozeb 75% WP Registered</p>
+<p class="text-xs text-mineral-muted">Central Insecticides Board &amp; Registration Committee cleared.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="relative">
+<span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-sunlight border-2 border-charcoal"></span>
+<div>
+<span class="text-[10px] font-mono tracking-widest text-sunlight uppercase font-semibold">05 · RECOMMENDATION ISSUED</span>
+<p class="text-sm font-semibold text-mineral">2.0 g/L Foliar Concentration</p>
+<p class="text-xs text-mineral-muted">Safety withholding period: 7 days before harvest.</p>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-3 rounded-2xl bg-white/[0.06] hover:bg-white/[0.1] text-xs font-semibold text-mineral transition-colors" onclick="switchChapter('result')">
+          Return to Action Narrative
+        </button>
+</section>
+<!-- ================= CHAPTER 8: SECOND OPINION (EXPERT REVIEW) ================= -->
+<section class="screen-panel flex-1 flex-col justify-between px-6 pt-3 pb-4 overflow-y-auto" id="chapter-expert">
+<div class="flex items-center justify-between pt-1">
+<button class="w-8 h-8 rounded-full bg-carbon border border-white/10 flex items-center justify-center text-mineral" onclick="switchChapter('result')">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<span class="text-xs font-mono tracking-widest text-mineral-muted uppercase font-medium">EXPERT ESCALATION</span>
+<div class="w-8"></div>
+</div>
+<div class="my-auto space-y-4">
+<div class="space-y-1">
+<span class="text-[10px] font-mono tracking-[0.25em] text-sunlight uppercase font-semibold">SAFEGUARD ESCALATION</span>
+<h2 id="expert-heading" class="text-2xl font-bold text-mineral tracking-tight">This deserves a second opinion.</h2>
+<p class="text-xs text-mineral/80 font-serif italic leading-relaxed">
+              When symptoms indicate ambiguity, THUNAI connects directly to certified university agronomists.
+            </p>
+</div>
+<!-- Prepared Agronomist Case Dossier -->
+<div class="p-4 rounded-3xl bg-carbon border border-white/[0.08] space-y-2.5">
+<div class="flex items-center justify-between pb-2 border-b border-white/[0.06]">
+<span class="text-xs font-semibold text-mineral">Dossier #TN-COI-8402</span>
+<span class="text-[10px] font-mono text-emerald uppercase font-medium">Ready to Dispatch</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-xs">
+<div>
+<span class="text-mineral-muted block text-[10px]">Crop &amp; Variety</span>
+<span id="expert-crop-info" class="text-mineral font-medium">Tomato · Shivam F1</span>
+</div>
+<div>
+<span class="text-mineral-muted block text-[10px]">Location</span>
+<span class="text-mineral font-medium">Thondamuthur Block</span>
+</div>
+<div>
+<span class="text-mineral-muted block text-[10px]">Symptom Anomaly</span>
+<span id="expert-anomaly-info" class="text-mineral font-medium">Septoria / Early Blight?</span>
+</div>
+<div>
+<span class="text-mineral-muted block text-[10px]">Weather Risk</span>
+<span id="expert-risk-info" class="text-sunlight font-medium">Rain in 3 Hours</span>
+</div>
+</div>
+</div>
+<!-- Direct 1-Tap KVK Connection -->
+<div class="space-y-2">
+<button class="w-full py-3.5 rounded-2xl bg-emerald hover:bg-emerald-bright text-obsidian text-xs font-semibold flex items-center justify-center gap-2 shadow-lg shadow-emerald/20 transition-all">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>Connect with KVK Extension Officer</span>
+</button>
+<button class="w-full py-2.5 rounded-2xl bg-white/[0.05] hover:bg-white/[0.09] text-xs font-medium text-mineral transition-colors" onclick="switchChapter('diagnosis')">
+              Capture Additional Photo
+            </button>
+</div>
+</div>
+<div class="text-center pb-2">
+<p class="text-[11px] text-mineral-muted">TNAU Krishi Vigyan Kendra helpline: 1800-425-1660</p>
+</div>
+</section>
+</div>
+<!-- Ultra-Subtle Floating Bottom Dock (Home, Crops, History, You) -->
+<footer class="relative z-40 px-6 pb-5 pt-1">
+<div class="w-full h-14 rounded-full bg-obsidian/85 backdrop-blur-2xl border border-white/[0.08] px-6 flex items-center justify-between shadow-2xl">
+<button class="dock-btn flex flex-col items-center justify-center text-emerald transition-colors" id="dock-home" onclick="switchChapter('home')">
+<span class="material-symbols-outlined text-lg">home</span>
+<span class="text-[9px] font-medium tracking-wider mt-0.5">Home</span>
+</button>
+<button class="dock-btn flex flex-col items-center justify-center text-mineral-muted hover:text-mineral transition-colors" id="dock-crops" onclick="switchChapter('diagnosis')">
+<span class="material-symbols-outlined text-lg">potted_plant</span>
+<span class="text-[9px] font-medium tracking-wider mt-0.5">Crops</span>
+</button>
+<button class="dock-btn flex flex-col items-center justify-center text-mineral-muted hover:text-mineral transition-colors" id="dock-history" onclick="switchChapter('trace')">
+<span class="material-symbols-outlined text-lg">history</span>
+<span class="text-[9px] font-medium tracking-wider mt-0.5">History</span>
+</button>
+<button class="dock-btn flex flex-col items-center justify-center text-mineral-muted hover:text-mineral transition-colors" id="dock-you" onclick="switchChapter('expert')">
+<span class="material-symbols-outlined text-lg">person</span>
+<span class="text-[9px] font-medium tracking-wider mt-0.5">You</span>
+</button>
+</div>
+</footer>
+</main>
+<!-- Interactive Chapter Controller Script -->
+<script>
+    function switchChapter(chapterId) {
+      // Hide all panels
+      document.querySelectorAll('.screen-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+
+      // Activate chosen chapter panel
+      const targetPanel = document.getElementById('chapter-' + chapterId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+
+      // Update top walkthrough tab styles
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-emerald', 'text-obsidian', 'font-semibold');
+        btn.classList.add('text-mineral-muted');
+      });
+      const activeTab = document.getElementById('tab-' + chapterId);
+      if (activeTab) {
+        activeTab.classList.remove('text-mineral-muted');
+        activeTab.classList.add('bg-emerald', 'text-obsidian', 'font-semibold');
+      }
+
+      // Sync dock button color if matching
+      const dockMap = {
+        'home': 'dock-home',
+        'field-morph': 'dock-home',
+        'diagnosis': 'dock-crops',
+        'result': 'dock-crops',
+        'doselock': 'dock-crops',
+        'weather': 'dock-crops',
+        'trace': 'dock-history',
+        'expert': 'dock-you'
+      };
+
+      document.querySelectorAll('.dock-btn').forEach(btn => {
+        btn.classList.remove('text-emerald');
+        btn.classList.add('text-mineral-muted');
+      });
+
+      const activeDockId = dockMap[chapterId];
+      if (activeDockId) {
+        const activeDock = document.getElementById(activeDockId);
+        if (activeDock) {
+          activeDock.classList.remove('text-mineral-muted');
+          activeDock.classList.add('text-emerald');
+        }
+      }
+    }
+  
+    // Current Active Crop Selection
+    let currentSelectedCrop = 'tomato';
+
+    const cropMeta = {
+      paddy: { en: 'Paddy', ta: 'நெல்', sci: 'Oryza sativa' },
+      tomato: { en: 'Tomato', ta: 'தக்காளி', sci: 'Solanum lycopersicum' },
+      banana: { en: 'Banana', ta: 'வாழை', sci: 'Musa paradisiaca' },
+      chilli: { en: 'Chilli', ta: 'மிளகாய்', sci: 'Capsicum annuum' }
+    };
+
+    function selectCrop(cropId) {
+      currentSelectedCrop = cropId;
+      document.querySelectorAll('.crop-chip').forEach(chip => {
+        chip.classList.remove('border-emerald/50', 'bg-emerald/20', 'text-emerald-bright', 'font-semibold');
+        chip.classList.add('border-white/10', 'bg-white/5', 'text-mineral');
+      });
+      const activeChip = document.getElementById('crop-chip-' + cropId);
+      if (activeChip) {
+        activeChip.classList.remove('border-white/10', 'bg-white/5', 'text-mineral');
+        activeChip.classList.add('border-emerald/50', 'bg-emerald/20', 'text-emerald-bright', 'font-semibold');
+      }
+      const meta = cropMeta[cropId];
+      const lbl = document.getElementById('selected-crop-label');
+      if (lbl && meta) {
+        lbl.innerText = meta.ta + ' · ' + meta.en;
+      }
+      const ctxText = document.getElementById('morph-context-text');
+      if (ctxText && meta) {
+        ctxText.innerText = 'Context: ' + meta.en + ' · Coimbatore';
+      }
+    }
+
+    async function runScenario(queryText, cropId, requestedChem = null) {
+      selectCrop(cropId);
+      const inputEl = document.getElementById('morph-query-input');
+      if (inputEl) inputEl.value = queryText;
+      switchChapter('field-morph');
+      await executeQuery(queryText, cropId, requestedChem);
+    }
+
+    async function submitFromInput() {
+      const inputEl = document.getElementById('morph-query-input');
+      const text = inputEl ? inputEl.value.trim() : '';
+      if (!text) return;
+      await executeQuery(text, currentSelectedCrop);
+    }
+
+    async function executeQuery(queryText, cropId, requestedChemical = null) {
+      try {
+        const payload = {
+          query: queryText,
+          crop: cropId,
+          language: 'ta',
+          requested_chemical: requestedChemical
+        };
+
+        const res = await fetch('/api/query', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+          console.error('Query execution failed:', res.status);
+          return;
+        }
+
+        const data = await res.json();
+        updateUIWithResponse(data);
+      } catch (err) {
+        console.error('Error connecting to THUNAI backend:', err);
+      }
+    }
+
+    function updateUIWithResponse(data) {
+      const topCand = data.candidates && data.candidates.length > 0 ? data.candidates[0] : null;
+      const isAllowed = data.safety_decision.is_allowed;
+      const isBlocked = data.safety_decision.is_blocked;
+
+      // 1. Update Chapter 3 Crop Vision
+      const pathogenEl = document.getElementById('vision-pathogen-scientific');
+      if (pathogenEl) {
+        pathogenEl.innerText = data.target_problem || 'Agricultural Anomaly';
+      }
+      const visionCrop = document.getElementById('vision-crop-name');
+      if (visionCrop && data.isolated_crop) {
+        const sci = cropMeta[data.isolated_crop_id] ? cropMeta[data.isolated_crop_id].sci : '';
+        visionCrop.innerText = data.isolated_crop + ' (' + sci + ')';
+      }
+      const confEl = document.getElementById('vision-confidence');
+      if (confEl && topCand) {
+        confEl.innerText = 'Evidence Score: ' + Math.round(topCand.score * 100) + '%';
+      }
+
+      // 2. Update Chapter 4 Action Narrative
+      const diagName = document.getElementById('action-diagnosis-name');
+      if (diagName) diagName.innerText = data.target_problem || 'Crop Anomaly';
+      const chemName = document.getElementById('action-chem-name');
+      const chemStatus = document.getElementById('action-chem-status');
+      if (topCand && chemName) {
+        chemName.innerText = topCand.active_ingredient + ' ' + (topCand.formulation || '');
+        if (chemStatus) {
+          chemStatus.innerText = isAllowed ? 'Verified & Approved (Dose Locked)' : (isBlocked ? 'LEGAL/POLICY BLOCK: Prohibited' : 'Evaluation required');
+        }
+      }
+
+      // 3. Update Chapter 5 Dose Lock Ceremony
+      const cropVal = document.getElementById('dose-crop-val');
+      if (cropVal) cropVal.innerHTML = '● ' + (data.isolated_crop || 'Matched');
+      const probVal = document.getElementById('dose-problem-val');
+      if (probVal) probVal.innerHTML = '● ' + (data.target_problem || 'Verified');
+      const aiVal = document.getElementById('dose-ai-val');
+      if (aiVal && topCand) aiVal.innerHTML = '● ' + topCand.active_ingredient;
+      const statusVal = document.getElementById('dose-status-val');
+      if (statusVal) {
+        statusVal.innerHTML = isAllowed ? '● Verified & Dose Locked' : '<span class="text-red-400">● ' + data.safety_decision.reason_code + '</span>';
+      }
+
+      const amountVal = document.getElementById('dose-amount-val');
+      const unitVal = document.getElementById('dose-unit-val');
+      const prodName = document.getElementById('dose-product-name');
+      const basisVal = document.getElementById('dose-basis-val');
+      const regId = document.getElementById('dose-registry-id');
+
+      if (isAllowed && topCand) {
+        if (amountVal) amountVal.innerText = topCand.dose;
+        if (unitVal) unitVal.innerText = topCand.dose_unit;
+        if (prodName) prodName.innerText = topCand.active_ingredient + ' ' + (topCand.formulation || '');
+        if (basisVal) basisVal.innerText = 'Foliar spray · Waiting period: ' + (topCand.waiting_period_days || 0) + ' days';
+        if (regId) regId.innerText = 'DocID: ' + topCand.evidence_id + ' | ' + (topCand.source || '');
+      } else if (isBlocked) {
+        if (amountVal) amountVal.innerText = '0.0';
+        if (unitVal) unitVal.innerText = 'LOCKED';
+        if (prodName) prodName.innerText = 'BLOCKED: ' + data.safety_decision.reason_code;
+        if (basisVal) basisVal.innerText = data.safety_decision.human_reason;
+      }
+
+      // 4. Update Chapter 7 Evidence Trace
+      const traceContainer = document.getElementById('evidence-trace-container');
+      if (traceContainer && topCand) {
+        traceContainer.innerHTML = `
+          <div class="relative">
+            <span class="pulse-glow absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-emerald border-2 border-charcoal"></span>
+            <div>
+              <span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">01 · QUERY NORMALIZATION</span>
+              <p class="text-sm font-semibold text-mineral">${data.query}</p>
+              <p class="text-xs text-mineral-muted">Crop isolated: ${data.isolated_crop} | Target: ${data.target_problem || 'N/A'}</p>
+            </div>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-emerald border-2 border-charcoal"></span>
+            <div>
+              <span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">02 · EVIDENCE RETRIEVAL</span>
+              <p class="text-sm font-semibold text-mineral">${topCand.source_reference || topCand.source}</p>
+              <p class="text-xs text-mineral-muted">DocID: ${topCand.evidence_id}</p>
+            </div>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-emerald border-2 border-charcoal"></span>
+            <div>
+              <span class="text-[10px] font-mono tracking-widest text-emerald uppercase font-semibold">03 · VERBATIM STATUTORY RECORD</span>
+              <p class="text-xs text-mineral font-mono leading-snug">${topCand.notes || 'Official university specification'}</p>
+            </div>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full ${isAllowed ? 'bg-sunlight' : 'bg-red-400'} border-2 border-charcoal"></span>
+            <div>
+              <span class="text-[10px] font-mono tracking-widest ${isAllowed ? 'text-sunlight' : 'text-red-400'} uppercase font-semibold">04 · DOSE LOCK DECISION</span>
+              <p class="text-sm font-semibold text-mineral">${data.safety_decision.decision} (${data.safety_decision.reason_code})</p>
+              <p class="text-xs text-mineral-muted">${data.action_decision.farmer_message_ta || data.action_decision.farmer_message}</p>
+            </div>
+          </div>
+        `;
+      }
+
+      // If blocked or escalated, auto switch to Chapter 8 or Chapter 5
+      if (isBlocked) {
+        const expHead = document.getElementById('expert-heading');
+        if (expHead) expHead.innerText = 'Statutory Block: ' + data.safety_decision.reason_code;
+        const expCrop = document.getElementById('expert-crop-info');
+        if (expCrop) expCrop.innerText = data.isolated_crop;
+        const expReason = document.getElementById('expert-anomaly-info');
+        if (expReason) expReason.innerText = data.safety_decision.human_reason;
+        const expRisk = document.getElementById('expert-risk-info');
+        if (expRisk) expRisk.innerText = 'Legal Prohibition Active';
+        switchChapter('expert');
+      } else {
+        switchChapter('doselock');
+      }
+    }
+
+  </script>
+</body></html>
