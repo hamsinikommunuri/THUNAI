@@ -30,7 +30,7 @@ class TestEscalation:
     def test_banned_chemical_action_decision(self):
         safety_dec = SafetyDecision(
             decision=DecisionType.BLOCK,
-            reason_code=ReasonCode.BANNED_CHEMICAL,
+            reason_code=ReasonCode.BANNED_FOR_CROP,
             reason_category=ReasonCategory.LEGAL_REGULATORY,
             human_reason="Monocrotophos is banned on vegetables.",
             human_reason_ta="காய்கறிப் பயிர்களில் மோனோகுரோட்டோபாஸ் தடை செய்யப்பட்டுள்ளது.",

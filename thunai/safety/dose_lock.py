@@ -114,10 +114,17 @@ class DoseLockEngine:
                 days_to_harvest=context.days_to_harvest,
             )
             if not direct_chem_check.is_safe:
-                # If banned or restricted, block immediately
+                # If banned, restricted, or policy blocked, block immediately
                 if direct_chem_check.reason_code in (
-                    ReasonCode.BANNED_CHEMICAL,
-                    ReasonCode.RESTRICTED_CHEMICAL,
+                    ReasonCode.BANNED_NATIONWIDE,
+                    ReasonCode.BANNED_FOR_CROP,
+                    ReasonCode.BANNED_FORMULATION,
+                    ReasonCode.RESTRICTED_USE,
+                    ReasonCode.RESTRICTED_OPERATOR,
+                    ReasonCode.WITHDRAWN,
+                    ReasonCode.UNKNOWN_REGULATORY_STATUS,
+                    ReasonCode.THUNAI_SAFETY_POLICY,
+                    ReasonCode.HAZARDOUS_TANK_MIX,
                 ):
                     return SafetyDecision(
                         decision=DecisionType.BLOCK,

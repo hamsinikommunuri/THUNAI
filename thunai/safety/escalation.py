@@ -66,7 +66,12 @@ def build_action_decision(
 
     # A. Legal / Regulatory Bans & Restrictions
     if safety_decision.reason_category == ReasonCategory.LEGAL_REGULATORY:
-        if reason_code == ReasonCode.BANNED_CHEMICAL:
+        if reason_code in (
+            ReasonCode.BANNED_NATIONWIDE,
+            ReasonCode.BANNED_FOR_CROP,
+            ReasonCode.BANNED_FORMULATION,
+            ReasonCode.BANNED_CHEMICAL,
+        ):
             return ActionDecision(
                 status=ActionStatus.BLOCK_AND_EXPLAIN,
                 safety_decision=safety_decision,
@@ -87,7 +92,11 @@ def build_action_decision(
                 next_step="Consult local KVK or agricultural extension officer for approved bio/chemical alternatives.",
             )
 
-        if reason_code == ReasonCode.RESTRICTED_CHEMICAL:
+        if reason_code in (
+            ReasonCode.RESTRICTED_USE,
+            ReasonCode.RESTRICTED_OPERATOR,
+            ReasonCode.RESTRICTED_CHEMICAL,
+        ):
             return ActionDecision(
                 status=ActionStatus.BLOCK_AND_EXPLAIN,
                 safety_decision=safety_decision,
