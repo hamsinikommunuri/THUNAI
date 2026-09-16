@@ -56,6 +56,13 @@ class CropInfo(BaseModel):
     icon: str
 
 
+@app.get("/debug")
+@app.get("/api/debug")
+def get_debug_info():
+    return {"status": "ok", "service": "THUNAI"}
+
+
+@app.get("/crops", response_model=List[CropInfo])
 @app.get("/api/crops", response_model=List[CropInfo])
 def get_supported_crops():
     """Returns the 4 controlled Phase 1 crops."""
@@ -91,6 +98,7 @@ def get_supported_crops():
     ]
 
 
+@app.post("/query")
 @app.post("/api/query")
 def process_farmer_query(req: QueryRequest) -> Dict[str, Any]:
     """Processes farmer query through Context Isolation -> Hybrid Retrieval -> DoseLock -> Advisory."""
