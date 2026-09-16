@@ -2,7 +2,7 @@
 
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -211,3 +211,13 @@ def serve_design_system():
     if md_path.exists():
         return FileResponse(str(md_path), media_type="text/markdown")
     raise HTTPException(status_code=404, detail="DESIGN.md not found")
+
+
+@app.api_route("/{full_path:path}", methods=["GET", "POST"])
+def catch_all(request: Request, full_path: str):
+    return {
+        "status": "catch_all",
+        "full_path": full_path,
+        "path": request.url.path,
+        "scope_path": request.scope.get("path"),
+    }
