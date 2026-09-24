@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+body {
+  background-color: #080B0A;
+  color: #F4F1E8;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom living natural scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(95, 203, 135, 0.35);
+}
+
+/* Glass & Field surfaces */
+.glass-panel {
+  background: rgba(14, 20, 17, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border-color: rgba(95, 203, 135, 0.25);
+}
+
+.field-lens {
+  background: radial-gradient(110% 120% at 50% 0%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 55%, rgba(0, 0, 0, 0.45) 100%);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16), 0 12px 32px -10px rgba(0, 0, 0, 0.85);
+}
+
+/* Soft scan sweep for scanner */
+@keyframes sweep {
+  0% { top: 4%; opacity: 0; }
+  15% { opacity: 0.9; }
+  85% { opacity: 0.9; }
+  100% { top: 94%; opacity: 0; }
+}
+
+.animate-scan-line {
+  animation: sweep 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Botanical subtle pulse */
+@keyframes leaf-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.animate-breathe {
+  animation: leaf-breathe 4s ease-in-out infinite;
+}

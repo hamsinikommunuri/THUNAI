@@ -1,0 +1,145 @@
+{
+  "architecture": "MobileNetV3-Small",
+  "best_epoch": 8,
+  "train_accuracy": 0.9812,
+  "validation_accuracy": 0.9421,
+  "held_out_test_accuracy": 0.9656,
+  "crop_conditioned_test_accuracy": 0.9679,
+  "macro_precision": 0.9601,
+  "macro_recall": 0.9426,
+  "macro_f1": 0.9439,
+  "generalization_gap": 0.039,
+  "validation_test_gap": -0.0235,
+  "total_test_samples": 436,
+  "classes": [
+    "banana__bacterial_wilt",
+    "banana__black_sigatoka",
+    "banana__healthy",
+    "chilli__bacterial_spot",
+    "chilli__healthy",
+    "potato__early_blight",
+    "potato__healthy",
+    "potato__late_blight",
+    "rice__bacterial_blight",
+    "rice__brown_spot",
+    "rice__leaf_smut",
+    "tomato__bacterial_spot",
+    "tomato__early_blight",
+    "tomato__healthy",
+    "tomato__late_blight",
+    "tomato__leaf_mold",
+    "tomato__septoria_leaf_spot",
+    "tomato__yellow_leaf_curl"
+  ],
+  "per_class_metrics": {
+    "banana__bacterial_wilt": {
+      "precision": 0.9655,
+      "recall": 1.0,
+      "f1": 0.9825,
+      "support": 28
+    },
+    "banana__black_sigatoka": {
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "support": 6
+    },
+    "banana__healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "chilli__bacterial_spot": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "chilli__healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "potato__early_blight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "potato__healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 24
+    },
+    "potato__late_blight": {
+      "precision": 1.0,
+      "recall": 0.9667,
+      "f1": 0.9831,
+      "support": 30
+    },
+    "rice__bacterial_blight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 6
+    },
+    "rice__brown_spot": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "support": 6
+    },
+    "rice__leaf_smut": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 6
+    },
+    "tomato__bacterial_spot": {
+      "precision": 0.931,
+      "recall": 0.9,
+      "f1": 0.9153,
+      "support": 30
+    },
+    "tomato__early_blight": {
+      "precision": 0.9333,
+      "recall": 0.9333,
+      "f1": 0.9333,
+      "support": 30
+    },
+    "tomato__healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "tomato__late_blight": {
+      "precision": 0.8824,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "support": 30
+    },
+    "tomato__leaf_mold": {
+      "precision": 0.9677,
+      "recall": 1.0,
+      "f1": 0.9836,
+      "support": 30
+    },
+    "tomato__septoria_leaf_spot": {
+      "precision": 1.0,
+      "recall": 0.8667,
+      "f1": 0.9286,
+      "support": 30
+    },
+    "tomato__yellow_leaf_curl": {
+      "precision": 0.9355,
+      "recall": 0.9667,
+      "f1": 0.9508,
+      "support": 30
+    }
+  },
+  "status": "LEGITIMATE_HELD_OUT_EVALUATION"
+}

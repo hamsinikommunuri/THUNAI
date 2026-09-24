@@ -1,0 +1,130 @@
+{
+  "national_helplines": [
+    {
+      "name": "Kisan Call Center (KCC) - Government of India",
+      "phone": "1800-180-1551",
+      "hours": "06:00 AM - 10:00 PM (All 7 Days)",
+      "languages": ["Tamil", "Hindi", "Telugu", "Kannada", "Malayalam", "English", "Marathi", "Bengali"],
+      "cost": "Toll Free",
+      "authority": "Ministry of Agriculture & Farmers Welfare"
+    },
+    {
+      "name": "TNAU Agritech Kisan Helpline",
+      "phone": "1800-425-1660",
+      "hours": "09:00 AM - 05:30 PM (Working Days)",
+      "languages": ["Tamil", "English"],
+      "cost": "Toll Free",
+      "authority": "Tamil Nadu Agricultural University, Coimbatore"
+    },
+    {
+      "name": "ICAR Central Farmer Advisory Services",
+      "phone": "011-25841000",
+      "hours": "09:30 AM - 05:00 PM",
+      "languages": ["Hindi", "English"],
+      "cost": "Standard Landline Rates",
+      "authority": "Indian Council of Agricultural Research, Pusa, New Delhi"
+    }
+  ],
+  "district_kvk_centers": {
+    "coimbatore": {
+      "name": "ICAR-KVK Coimbatore (TNAU Campus)",
+      "district": "Coimbatore",
+      "state": "Tamil Nadu",
+      "address": "Agricultural College and Research Institute, TNAU, Coimbatore - 641003",
+      "phone": "+91 422 6611204",
+      "email": "kvkcoimbatore@tnau.ac.in",
+      "officer_in_charge": "Senior Scientist & Head, KVK Coimbatore",
+      "specialization": ["Horticultural Pathology", "Soil Science", "Biological Pest Control"]
+    },
+    "tiruppur": {
+      "name": "ICAR-KVK Tiruppur",
+      "district": "Tiruppur",
+      "state": "Tamil Nadu",
+      "address": "Pongalur, Tiruppur District - 641667",
+      "phone": "+91 421 2315000",
+      "email": "kvkpongalur@tnau.ac.in",
+      "officer_in_charge": "Programme Coordinator, KVK Tiruppur",
+      "specialization": ["Dryland Agriculture", "Vegetables", "Poultry & Fodder"]
+    },
+    "salem": {
+      "name": "ICAR-KVK Salem (Sandhiyur)",
+      "district": "Salem",
+      "state": "Tamil Nadu",
+      "address": "Veterinary University Campus, Sandhiyur, Salem - 636203",
+      "phone": "+91 427 2422550",
+      "email": "kvksalem@tnau.ac.in",
+      "officer_in_charge": "Head & Senior Scientist",
+      "specialization": ["Spices", "Tapioca Pathology", "Organic Amendments"]
+    },
+    "madurai": {
+      "name": "ICAR-KVK Madurai",
+      "district": "Madurai",
+      "state": "Tamil Nadu",
+      "address": "Agricultural College & Research Institute, Othakkadai, Madurai - 625104",
+      "phone": "+91 452 2422955",
+      "email": "kvkmdu@tnau.ac.in",
+      "officer_in_charge": "Senior Scientist & Head",
+      "specialization": ["Pulses", "Jasmine & Horticulture", "Soil Fertility"]
+    },
+    "thanjavur": {
+      "name": "ICAR-KVK Thanjavur (Needamangalam / Thanjavur)",
+      "district": "Thanjavur",
+      "state": "Tamil Nadu",
+      "address": "Soil and Water Management Research Institute, Thanjavur - 613501",
+      "phone": "+91 4362 267680",
+      "email": "kvktnr@tnau.ac.in",
+      "officer_in_charge": "Programme Coordinator",
+      "specialization": ["Lowland Paddy Diseases", "Delta Soil Health", "Waterlogged Systems"]
+    },
+    "tiruchirappalli": {
+      "name": "ICAR-NRCB Extension Center / KVK Sirugamani",
+      "district": "Tiruchirappalli",
+      "state": "Tamil Nadu",
+      "address": "Sugarcane Research Station Campus, Sirugamani, Tiruchirappalli - 639115",
+      "phone": "+91 431 2614417",
+      "email": "kvksrg@tnau.ac.in",
+      "officer_in_charge": "Senior Scientist & Head",
+      "specialization": ["Banana Pathology (NRCB)", "Rice-Sugarcane Systems", "Nutrient Management"]
+    },
+    "guntur": {
+      "name": "ICAR-KVK Guntur (ANGRAU Lam)",
+      "district": "Guntur",
+      "state": "Andhra Pradesh",
+      "address": "Regional Agricultural Research Station, Lam, Guntur - 522034",
+      "phone": "+91 863 2524017",
+      "email": "kvk.lam@angrau.ac.in",
+      "officer_in_charge": "Principal Scientist & Head",
+      "specialization": ["Chilli & Cotton IPM", "Bacterial Diseases", "Pesticide Safety"]
+    },
+    "pune": {
+      "name": "ICAR-KVK Pune (Baramati)",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "address": "Sharadanagar, Baramati, District Pune - 413115",
+      "phone": "+91 2112 255227",
+      "email": "kvkbaramati@yahoo.com",
+      "officer_in_charge": "Head & Senior Scientist",
+      "specialization": ["Polyhouse & Protected Horticulture", "Grape & Tomato Pathology", "Micro-Irrigation"]
+    },
+    "shimoga": {
+      "name": "ICAR-KVK Shimoga",
+      "district": "Shimoga",
+      "state": "Karnataka",
+      "address": "Navile, Shimoga - 577204",
+      "phone": "+91 8182 267324",
+      "email": "kvkshimoga@uahs.edu.in",
+      "officer_in_charge": "Programme Coordinator",
+      "specialization": ["Arecanut & Paddy Pathology", "Acid Soil Remediation", "Integrated Farming"]
+    },
+    "karnal": {
+      "name": "ICAR-NDRI / CSSRI Extension Cell",
+      "district": "Karnal",
+      "state": "Haryana",
+      "address": "Zarifa Farm, Kachhwa Road, Karnal - 132001",
+      "phone": "+91 184 2290501",
+      "email": "director.cssri@icar.gov.in",
+      "officer_in_charge": "Extension Section Head",
+      "specialization": ["Cereal Crop Protection", "Soil Reclamation", "Field Crops"]
+    }
+  }
+}

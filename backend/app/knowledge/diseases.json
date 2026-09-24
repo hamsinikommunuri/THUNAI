@@ -1,0 +1,570 @@
+{
+  "tomato__early_blight": {
+    "crop": "tomato",
+    "disease_id": "early_blight",
+    "common_name": "Tomato Early Blight",
+    "scientific_name": "Alternaria solani",
+    "pathogen_type": "Fungus",
+    "symptoms": [
+      "Concentric dark brown target-board rings on older lower leaves",
+      "Chlorotic yellow halo surrounding brown necrotic lesions",
+      "Collar rot on stems and dark sunken leathery lesions at stem end of fruit",
+      "Progressive defoliation from ground level upward"
+    ],
+    "immediate_actions": [
+      "Prune heavily infected lower leaves showing target-board rings and burn or bury away from the field",
+      "Avoid overhead sprinkler irrigation to keep foliar canopy dry",
+      "Disinfect shears and pruning implements using 70% isopropyl alcohol between plants"
+    ],
+    "cultural_control": [
+      "Implement 3-year crop rotation with non-solanaceous crops (e.g., maize, pulses)",
+      "Mulch soil with clean straw or plastic to prevent rain splashback from soil onto lower foliage",
+      "Maintain adequate plant spacing (60 x 45 cm) for optimal canopy air circulation"
+    ],
+    "biological_control": [
+      "Foliar spray of Trichoderma harzianum or Pseudomonas fluorescens @ 5 g/L water during early vegetative stage",
+      "Neem oil 1500 ppm @ 3 ml/L as a preventive antifungal barrier"
+    ],
+    "monitoring_guidance": "Scout the field twice weekly starting from the 3rd week after transplanting, paying close attention to shaded lower leaves.",
+    "source": "TNAU Crop Protection Guide (Vegetables)",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_diseases_veg_tomato.html",
+    "publication": "TNAU AgriTech Portal & ICAR-IIHR Vegetable Pathology Manual",
+    "section_page": "Section 4.1: Solanaceous Diseases (p. 82-84)",
+    "last_verified": "2026-06-15"
+  },
+  "tomato__late_blight": {
+    "crop": "tomato",
+    "disease_id": "late_blight",
+    "common_name": "Tomato Late Blight",
+    "scientific_name": "Phytophthora infestans",
+    "pathogen_type": "Oomycete",
+    "symptoms": [
+      "Water-soaked pale green to dark brown irregular foliar lesions",
+      "Delicate white fungal-like sporulation on underside of leaves in humid conditions",
+      "Rapid wilting and browning of foliage resembling frost burn",
+      "Firm, dark, greasy rot on green fruit"
+    ],
+    "immediate_actions": [
+      "Immediately rogue out and destroy severely blighted plants to stop rapid air-borne zoospore spread",
+      "Halt all overhead watering immediately; ensure furrow or drip irrigation only",
+      "Alert neighboring farms if high humidity (>90%) and cool nights (15-20°C) persist"
+    ],
+    "cultural_control": [
+      "Use certified disease-free transplants and resistant cultivars (e.g., Arka Rakshak, Kashi Adarsh)",
+      "Avoid planting adjacent to potato fields",
+      "Ensure elevated ridges and beds for rapid soil drainage"
+    ],
+    "biological_control": [
+      "Preventive sprays of Trichoderma viride @ 5 g/L during cool moist weather",
+      "Bacillus subtilis foliar formulation @ 10 g/L"
+    ],
+    "monitoring_guidance": "Daily scouting is essential when temperatures stay between 15-22°C with persistent leaf wetness >10 hours.",
+    "source": "ICAR - Indian Institute of Vegetable Research (IIVR)",
+    "source_url": "https://iivr.icar.gov.in/crop-protection/late-blight-management",
+    "publication": "ICAR Integrated Pest Management in Solanaceous Crops",
+    "section_page": "Section 2.3: Late Blight Protocols",
+    "last_verified": "2026-05-20"
+  },
+  "tomato__bacterial_spot": {
+    "crop": "tomato",
+    "disease_id": "bacterial_spot",
+    "common_name": "Tomato Bacterial Spot",
+    "scientific_name": "Xanthomonas perforans",
+    "pathogen_type": "Bacterium",
+    "symptoms": [
+      "Small, angular, dark brown to black water-soaked lesions on leaves",
+      "Lesion centers dry up and tear away leaving a ragged appearance",
+      "Black scab-like elevated spots on green fruit surrounded by a white halo",
+      "Extensive leaf drop leading to sunscald on exposed fruit"
+    ],
+    "immediate_actions": [
+      "Never enter or work in wet fields as bacteria spread instantaneously via water film",
+      "Remove severely spotted seedlings and avoid working with damp foliage",
+      "Sterilize all stakes, cages, and tools in a 10% bleach solution"
+    ],
+    "cultural_control": [
+      "Treat seeds with hot water (50°C for 25 minutes) before sowing",
+      "Purchase certified pathogen-free seeds from reputable seed agencies",
+      "Avoid handling seedlings during high relative humidity"
+    ],
+    "biological_control": [
+      "Seed treatment with Pseudomonas fluorescens @ 10 g/kg seed",
+      "Bacteriophage biological sprays if certified commercial formulations are available"
+    ],
+    "monitoring_guidance": "Examine underside of young leaves for water-soaked greasy specks following heavy rainfall and wind storms.",
+    "source": "TNAU Agritech Portal - Plant Pathology",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_diseases_veg_tomato_bact.html",
+    "publication": "TNAU Technical Bulletin on Bacterial Diseases of Vegetables",
+    "section_page": "Chapter 3: Bacterial Spots (p. 45)",
+    "last_verified": "2026-07-10"
+  },
+  "tomato__septoria_leaf_spot": {
+    "crop": "tomato",
+    "disease_id": "septoria_leaf_spot",
+    "common_name": "Tomato Septoria Leaf Spot",
+    "scientific_name": "Septoria lycopersici",
+    "pathogen_type": "Fungus",
+    "symptoms": [
+      "Numerous small circular spots (2-3 mm) with gray or tan centers and dark brown margins",
+      "Tiny black pycnidia (fruiting bodies) clearly visible in center of mature spots with hand lens",
+      "Severe yellowing of affected leaves followed by complete leaf drop",
+      "Progresses rapidly upward from oldest bottom leaves"
+    ],
+    "immediate_actions": [
+      "Prune bottom 12 inches of foliage as soon as first clusters set to reduce splash inoculation",
+      "Collect and dispose fallen leaves away from field",
+      "Irrigate early in the morning so sun quickly dries foliar canopy"
+    ],
+    "cultural_control": [
+      "Deep plowing of field residues after harvest to bury overwintering pycnidia",
+      "Maintain strict weed control, especially solanaceous nightshade weeds",
+      "Stake and cage plants to keep foliage elevated off soil"
+    ],
+    "biological_control": [
+      "Bio-agent foliar application of Trichoderma harzianum @ 4 g/L water",
+      "Neem seed kernel extract (NSKE 5%) spray at 10-day intervals"
+    ],
+    "monitoring_guidance": "Check lower leaves weekly after prolonged cloudy or rainy weather.",
+    "source": "ICAR-IIHR Vegetable Pathology Division",
+    "source_url": "https://iihr.res.in/technologies/tomato-foliar-diseases",
+    "publication": "Management of Foliar Diseases in Solanaceous Crops",
+    "section_page": "Section 5: Septoria Management",
+    "last_verified": "2026-04-18"
+  },
+  "tomato__leaf_mold": {
+    "crop": "tomato",
+    "disease_id": "leaf_mold",
+    "common_name": "Tomato Leaf Mold",
+    "scientific_name": "Passalora fulva",
+    "pathogen_type": "Fungus",
+    "symptoms": [
+      "Pale green to yellow diffuse spots on upper leaf surfaces",
+      "Olive-green to velvety brown mold growth directly underneath on leaf undersides",
+      "Infected leaves curl, wither, and drop prematurely",
+      "Primarily affects greenhouse and polyhouse tomato crops with high humidity"
+    ],
+    "immediate_actions": [
+      "Increase greenhouse ventilation and air movement using fans or open side curtains",
+      "Lower relative humidity below 85% inside the canopy",
+      "Remove severely covered lower leaves to improve airflow"
+    ],
+    "cultural_control": [
+      "Provide adequate plant spacing and prune suckers regularly",
+      "Adopt drip irrigation exclusively",
+      "Keep night temperatures warm enough to prevent condensation on foliage"
+    ],
+    "biological_control": [
+      "Foliar application of Ampelomyces quisqualis or Bacillus amyloliquefaciens @ 5 g/L",
+      "Potassium bicarbonate preventive foliar spray @ 3 g/L"
+    ],
+    "monitoring_guidance": "Inspect undersides of mid-canopy leaves inside polyhouses or sheltered fields.",
+    "source": "TNAU Polyhouse Protected Cultivation Manual",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/horti_greenhouse_pest_disease.html",
+    "publication": "Protected Cultivation of Tomato: Disease Management",
+    "section_page": "Leaf Mold Protocol (p. 61)",
+    "last_verified": "2026-06-01"
+  },
+  "tomato__yellow_leaf_curl": {
+    "crop": "tomato",
+    "disease_id": "yellow_leaf_curl",
+    "common_name": "Tomato Yellow Leaf Curl Virus",
+    "scientific_name": "Tomato yellow leaf curl virus (TYLCV)",
+    "pathogen_type": "Virus (Begomovirus)",
+    "symptoms": [
+      "Severe stunting and erect bushy appearance of plants",
+      "Marked upward cupping, curling, and reduction in leaf size",
+      "Pronounced interveinal chlorosis (yellowing) with green veins on new growth",
+      "Flower abortion and failure to set fruit"
+    ],
+    "immediate_actions": [
+      "Immediately uproot and destroy infected viral symptomatic plants in plastic bags",
+      "Install yellow sticky traps (15-20 per acre) immediately to monitor and capture whitefly vectors",
+      "Do NOT compost virus-infected plants"
+    ],
+    "cultural_control": [
+      "Grow virus-tolerant / resistant hybrids (e.g., Arka Ananya, US-440)",
+      "Raise nursery seedlings under 40-mesh insect-proof nylon net",
+      "Erect 2 rows of barrier crops like maize, sorghum, or pearl millet around the tomato field perimeter"
+    ],
+    "biological_control": [
+      "Foliar spray of Lecanicillium lecanii (Verticillium lecanii) @ 5 g/L to suppress whitefly nymphs",
+      "Azadirachtin 1% (10,000 ppm) @ 1.5 ml/L water"
+    ],
+    "monitoring_guidance": "Monitor underside of young tender shoots in early morning for whitefly (Bemisia tabaci) populations.",
+    "source": "ICAR-NBAIR / TNAU Agritech Portal",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_diseases_veg_tomato_tylcv.html",
+    "publication": "Whitefly & Begomovirus Vector Management Bulletin",
+    "section_page": "Section 1.2: TYLCV Vector Containment",
+    "last_verified": "2026-05-12"
+  },
+  "tomato__healthy": {
+    "crop": "tomato",
+    "disease_id": "healthy",
+    "common_name": "Tomato Healthy Leaf",
+    "scientific_name": "Solanum lycopersicum",
+    "pathogen_type": "None",
+    "symptoms": [
+      "Uniform vibrant green foliage without spots, chlorosis, or curling",
+      "Firm, well-developed leaf veins and healthy petioles",
+      "Normal turgidity and balanced canopy expansion"
+    ],
+    "immediate_actions": [
+      "Maintain current balanced irrigation and fertigation schedule",
+      "Continue routine twice-weekly scouting of lower canopy",
+      "Ensure proper trellising and staking as plant loads increase"
+    ],
+    "cultural_control": [
+      "Balanced N-P-K nutrition with micronutrient supplement (calcium and boron to prevent blossom end rot)",
+      "Mulching to conserve root zone moisture"
+    ],
+    "biological_control": [
+      "Preventive application of Panchagavya (3%) or Jeevamrutha as bio-stimulant at 15-day intervals"
+    ],
+    "monitoring_guidance": "Regular visual scouting for early detection of pests like thrips, aphids, and fruit borers.",
+    "source": "TNAU Package of Practices - Horticultural Crops",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/horti_vegetables_tomato.html",
+    "publication": "Good Agricultural Practices (GAP) for Tomato Cultivation",
+    "section_page": "Chapter 2: Crop Maintenance (p. 23)",
+    "last_verified": "2026-06-20"
+  },
+  "potato__early_blight": {
+    "crop": "potato",
+    "disease_id": "early_blight",
+    "common_name": "Potato Early Blight",
+    "scientific_name": "Alternaria solani",
+    "pathogen_type": "Fungus",
+    "symptoms": [
+      "Dark brown to black angular spots with characteristic concentric rings on older leaves",
+      "Leaves turn yellow and dry up, remaining attached to the haulm",
+      "Tubers develop brown, sunken, corky dry rot beneath skin"
+    ],
+    "immediate_actions": [
+      "Avoid harvesting tubers during damp weather to prevent spore transfer into storage",
+      "Maintain adequate nitrogen and potassium fertility; stressed plants are significantly more susceptible",
+      "Destroy and bury infected haulms after dehaulming"
+    ],
+    "cultural_control": [
+      "Crop rotation with cereals, maize, or legumes for 2-3 years",
+      "Ensure certified disease-free seed tubers",
+      "Dehaulm (kill haulms) 10-15 days before harvest to thicken tuber skin"
+    ],
+    "biological_control": [
+      "Trichoderma viride seed tuber treatment @ 4 g/kg tuber",
+      "Neem seed kernel extract 5% foliar spray"
+    ],
+    "monitoring_guidance": "Scout bottom leaves starting 45 days after planting, particularly after intermittent rainfall followed by sunny days.",
+    "source": "ICAR - Central Potato Research Institute (CPRI), Shimla",
+    "source_url": "https://cpri.icar.gov.in/diseases-pests/early-blight",
+    "publication": "CPRI Technical Bulletin: Potato Pathology in Subtropical Plains",
+    "section_page": "Bulletin No. 89: Early Blight Management (p. 18-21)",
+    "last_verified": "2026-05-15"
+  },
+  "potato__late_blight": {
+    "crop": "potato",
+    "disease_id": "late_blight",
+    "common_name": "Potato Late Blight",
+    "scientific_name": "Phytophthora infestans",
+    "pathogen_type": "Oomycete",
+    "symptoms": [
+      "Water-soaked irregular patches on leaf margins and tips that turn dark brown to black rapidly",
+      "White cottony mildew growth visible on under-surface of lesions in morning humidity",
+      "Rapid blighting of the entire canopy with a characteristic decaying odor",
+      "Tubers show brown to purplish sunken surface rot and granular reddish-brown flesh"
+    ],
+    "immediate_actions": [
+      "Execute immediate protective fungicide spray upon first forecast warning of late blight conditions",
+      "If disease exceeds 20% canopy damage near maturity, cut haulms (dehaulming) to protect tubers from infection",
+      "Never wash infected tubers before cold storage"
+    ],
+    "cultural_control": [
+      "Plant resistant varieties like Kufri Girdhari, Kufri Himalini, Kufri Mohan",
+      "Adequate earthing up (20-25 cm ridge height) to prevent zoospores washing down to tubers",
+      "Use certified cold-store seed tubers from verified seed producers"
+    ],
+    "biological_control": [
+      "Trichoderma harzianum soil and foliar application as early preventive measure"
+    ],
+    "monitoring_guidance": "Utilize INDO-BLIGHTCAST weather-based forecaster: watch for temperatures 10-20°C with relative humidity >85% for 48 consecutive hours.",
+    "source": "ICAR-CPRI Shimla",
+    "source_url": "https://cpri.icar.gov.in/indoblightcast",
+    "publication": "Potato Late Blight Forecast and Containment Guidelines",
+    "section_page": "Chapter 4: Phytophthora Epidemic Controls",
+    "last_verified": "2026-06-18"
+  },
+  "potato__healthy": {
+    "crop": "potato",
+    "disease_id": "healthy",
+    "common_name": "Potato Healthy Haulm",
+    "scientific_name": "Solanum tuberosum",
+    "pathogen_type": "None",
+    "symptoms": [
+      "Robust lush green foliage, sturdy stems, and clean leaflets without discoloration"
+    ],
+    "immediate_actions": [
+      "Continue scheduled earthing-up to prevent tuber greening by sunlight",
+      "Maintain uniform soil moisture without water stagnation"
+    ],
+    "cultural_control": [
+      "Balanced NPK 120:100:120 kg/ha with timely top dressing of nitrogen",
+      "Regular de-weeding to avoid alternate host plants"
+    ],
+    "biological_control": [
+      "Bio-fertilizers Azotobacter and Phosphobacteria application @ 2.5 kg/ha"
+    ],
+    "monitoring_guidance": "Check aphid counts (Myzus persicae) on leaf undersides to maintain seed plot quality.",
+    "source": "ICAR-CPRI Package of Practices",
+    "source_url": "https://cpri.icar.gov.in",
+    "publication": "Commercial Potato Production Manual",
+    "section_page": "Section 1: Agronomy & Crop Health",
+    "last_verified": "2026-06-25"
+  },
+  "chilli__bacterial_spot": {
+    "crop": "chilli",
+    "disease_id": "bacterial_spot",
+    "common_name": "Chilli Bacterial Leaf Spot",
+    "scientific_name": "Xanthomonas euvesicatoria",
+    "pathogen_type": "Bacterium",
+    "symptoms": [
+      "Small circular to irregular dark brown water-soaked spots with yellow chlorotic halos",
+      "Spots coalesce causing extensive blighting and premature leaf shedding",
+      "Raised wart-like rough brownish lesions on green chilli pods"
+    ],
+    "immediate_actions": [
+      "Refrain from spray operations or weeding while crop canopy is wet",
+      "Remove severely infested lower leaves and destroy away from field",
+      "Avoid excessive nitrogen fertilization which produces succulent susceptible leaf tissue"
+    ],
+    "cultural_control": [
+      "Seed treatment with hot water (50°C for 25 min) or Streptocycline 100 ppm for 30 min",
+      "Adopt raised bed cultivation with furrow irrigation",
+      "Crop rotation with maize or sorghum for 2 seasons"
+    ],
+    "biological_control": [
+      "Seed treatment with Pseudomonas fluorescens @ 10 g/kg seed and soil application @ 2.5 kg/ha",
+      "Foliar spray of Bacillus subtilis @ 5 g/L"
+    ],
+    "monitoring_guidance": "Monitor fields closely following monsoon showers and high wind events.",
+    "source": "TNAU Agritech Portal - Chilli Pathology",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_diseases_veg_chillies.html",
+    "publication": "TNAU Crop Protection Guide for Spices & Condiments",
+    "section_page": "Section 2.4: Chilli Bacterial Spot",
+    "last_verified": "2026-05-30"
+  },
+  "chilli__healthy": {
+    "crop": "chilli",
+    "disease_id": "healthy",
+    "common_name": "Chilli Healthy Plant",
+    "scientific_name": "Capsicum annuum",
+    "pathogen_type": "None",
+    "symptoms": [
+      "Vigorous green foliage with smooth shiny leaf surfaces, upright branching, and healthy blossoms"
+    ],
+    "immediate_actions": [
+      "Maintain consistent drip irrigation; avoid drought followed by heavy flooding which causes blossom drop",
+      "Monitor for thrips, mites, and aphids"
+    ],
+    "cultural_control": [
+      "Installation of blue sticky traps for thrips and yellow traps for aphids/whiteflies (12 traps/acre)",
+      "Balanced NPK fertilization with micronutrient foliar spray (Zinc, Boron)"
+    ],
+    "biological_control": [
+      "Neem seed kernel extract (NSKE 5%) preventive spray every 15 days"
+    ],
+    "monitoring_guidance": "Weekly scouting of growing tips and underside of young leaves.",
+    "source": "TNAU Horticultural College and Research Institute",
+    "source_url": "https://agritech.tnau.ac.in/horticulture/horti_spices_chillies.html",
+    "publication": "Chilli Production Technology Guide",
+    "section_page": "Chapter 3: Healthy Maintenance",
+    "last_verified": "2026-06-10"
+  },
+  "rice__bacterial_blight": {
+    "crop": "rice",
+    "disease_id": "bacterial_blight",
+    "common_name": "Rice Bacterial Leaf Blight",
+    "scientific_name": "Xanthomonas oryzae pv. oryzae",
+    "pathogen_type": "Bacterium",
+    "symptoms": [
+      "Water-soaked stripes starting from leaf tips and margins, expanding into wavy yellowish-white lesions",
+      "Milky bacterial exudate oozing from cut edges of infected leaves when placed in water (ooze test positive)",
+      "Severe 'Kresek' seedling wilt phase causing complete seedling collapse",
+      "Straw-colored dried leaves looking bleached in the sun"
+    ],
+    "immediate_actions": [
+      "Drain the field immediately to reduce standing water humidity and eliminate bacterial swimming dispersal",
+      "Withhold all top-dressing of nitrogen fertilizer immediately; split application only after disease arrest",
+      "Avoid clip pruning of seedling tips during transplanting"
+    ],
+    "cultural_control": [
+      "Plant resistant rice varieties (e.g., Improved Samba Mahsuri, CO 51, CR Dhan 800)",
+      "Apply potassium fertilizer @ 50 kg/ha in two splits to enhance plant tissue resistance",
+      "Maintain clean bunds and eliminate wild rice and Cyperus weeds"
+    ],
+    "biological_control": [
+      "Seedling dip in Pseudomonas fluorescens (0.2%) suspension for 30 minutes before transplanting",
+      "Foliar spray of fresh cow dung extract (20%) which exhibits antagonistic bacterial activity"
+    ],
+    "monitoring_guidance": "Check outer leaf tips across the field after cyclones, storms, or heavy rain accompanied by strong winds.",
+    "source": "ICAR - National Rice Research Institute (NRRI), Cuttack",
+    "source_url": "https://nrri.icar.gov.in/rice-diseases/bacterial-blight",
+    "publication": "NRRI Disease Bulletin: Bacterial Blight Management in Lowland Rice",
+    "section_page": "Bulletin No. 42: Bacterial Pathogens (p. 12-16)",
+    "last_verified": "2026-06-05"
+  },
+  "rice__brown_spot": {
+    "crop": "rice",
+    "disease_id": "brown_spot",
+    "common_name": "Rice Brown Spot",
+    "scientific_name": "Bipolaris oryzae",
+    "pathogen_type": "Fungus",
+    "symptoms": [
+      "Isolated oval or circular dark brown sesame-seed shaped spots on leaves",
+      "Mature lesions feature gray or whitish centers surrounded by a dark brown margin with a yellow halo",
+      "Discoloration and blackening of glumes leading to unfilled chaffy grains",
+      "Particularly prevalent in nutrient-deficient, poorly drained, or sandy soils"
+    ],
+    "immediate_actions": [
+      "Apply potassium and zinc nutrition if deficiency is suspected; Brown Spot is an indicator of poor soil fertility",
+      "Maintain continuous shallow submergence of 2-3 cm; avoid drying out the field",
+      "Treat seeds before sowing in the next season"
+    ],
+    "cultural_control": [
+      "Soil application of recommended NPK along with FYM @ 12.5 t/ha or vermicompost",
+      "Soil correction for zinc deficiency using Zinc Sulphate @ 25 kg/ha",
+      "Use certified healthy seed paddy"
+    ],
+    "biological_control": [
+      "Seed treatment with Trichoderma viride @ 4 g/kg seed",
+      "Foliar spray of Pseudomonas fluorescens @ 2.5 kg/ha mixed in 500 L water"
+    ],
+    "monitoring_guidance": "Scout leaves at tillering and panicle initiation stages, especially in drought-prone or rainfed uplands.",
+    "source": "TNAU Agritech Portal - Rice Diseases",
+    "source_url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_diseases_cereals_paddy_brownspot.html",
+    "publication": "TNAU Crop Protection Guide (Cereals)",
+    "section_page": "Chapter 1: Paddy Diseases (p. 8-11)",
+    "last_verified": "2026-05-18"
+  },
+  "rice__leaf_smut": {
+    "crop": "rice",
+    "disease_id": "leaf_smut",
+    "common_name": "Rice Leaf Smut",
+    "scientific_name": "Entyloma oryzae",
+    "pathogen_type": "Fungus",
+    "symptoms": [
+      "Small, angular, slightly raised, leaden-black spots on leaf blades",
+      "Lesions remain distinct and do not coalesce",
+      "Under moist weather, the epidermis ruptures releasing black powdery mass of teliospores",
+      "Leaves turn yellow and die prematurely from the tip downwards"
+    ],
+    "immediate_actions": [
+      "Avoid excessive late nitrogen top-dressing",
+      "Keep field well-aerated and avoid excessive plant density",
+      "Burn or plow under stubble after harvest to destroy teliospore survival"
+    ],
+    "cultural_control": [
+      "Balanced fertilization based on Soil Health Card recommendations",
+      "Adopt SRI (System of Rice Intensification) spacing (25 x 25 cm) for airy canopy"
+    ],
+    "biological_control": [
+      "Foliar spray of Trichoderma harzianum @ 5 g/L",
+      "Neem cake soil application @ 150 kg/ha"
+    ],
+    "monitoring_guidance": "Scout flag leaves and upper leaves during grain filling stages.",
+    "source": "ICAR-NRRI Cuttack",
+    "source_url": "https://nrri.icar.gov.in",
+    "publication": "Fungal Diseases of Rice in India",
+    "section_page": "Section 3.7: Minor Smuts and Spots",
+    "last_verified": "2026-04-22"
+  },
+  "banana__black_sigatoka": {
+    "crop": "banana",
+    "disease_id": "black_sigatoka",
+    "common_name": "Banana Black Sigatoka / Leaf Spot",
+    "scientific_name": "Pseudocercospora fijiensis",
+    "pathogen_type": "Fungus",
+    "symptoms": [
+      "Tiny reddish-brown to rusty streaks running parallel to leaf veins",
+      "Streaks enlarge into dark brown to black elliptical spots with light gray sunken centers",
+      "Massive coalescing of spots leading to rapid drying and scorching of entire leaf blades",
+      "Premature ripening of bunches with unmarketable undersized fingers"
+    ],
+    "immediate_actions": [
+      "De-leafing: Cut off infected portions or entire severely dried leaves and place them face-down on the ground to reduce ascospore air discharge",
+      "Ensure proper drainage trenches in the plantation to remove standing monsoon water",
+      "Desucker plants regularly to maintain a maximum of 1 mother and 1 daughter sucker per stool"
+    ],
+    "cultural_control": [
+      "Plant resistant or tolerant banana cultivars (e.g., FHIA hybrids where adapted)",
+      "Maintain wide spacing (2.1 x 2.1 m) to reduce canopy humidity",
+      "Adequate potassium fertilization to strengthen leaf cuticle resistance"
+    ],
+    "biological_control": [
+      "Foliar spray of mineral oil (Banole or horticultural mineral oil) @ 10 ml/L as an ovicide/fungicide barrier",
+      "Trichoderma viride foliar spray @ 5 g/L"
+    ],
+    "monitoring_guidance": "Weekly tracking of youngest leaf with streaks (YLS) on 10 marked plants across the grove.",
+    "source": "ICAR - National Research Centre for Banana (NRCB), Tiruchirappalli",
+    "source_url": "https://nrcb.icar.gov.in/sigatoka-management",
+    "publication": "NRCB Technical Bulletin No. 34: Integrated Sigatoka Disease Management",
+    "section_page": "Bulletin 34, Pages 14-22",
+    "last_verified": "2026-06-12"
+  },
+  "banana__bacterial_wilt": {
+    "crop": "banana",
+    "disease_id": "bacterial_wilt",
+    "common_name": "Banana Bacterial Wilt (Blood Disease / Moko)",
+    "scientific_name": "Xanthomonas vasicola pv. musacearum",
+    "pathogen_type": "Bacterium",
+    "symptoms": [
+      "Progressive yellowing and wilting of leaves starting from inner younger whorls",
+      "Premature yellowing and uneven ripening of fruit fingers with internal dark reddish-brown dry pulp rot",
+      "Vascular discoloration: Yellow, orange to dark brown strands visible when pseudostem is cut",
+      "Floral bracts wilt, blacken, and drop prematurely"
+    ],
+    "immediate_actions": [
+      "Debudding: Remove male flower bud (bell) using a forked wooden stick immediately after last hand has formed to prevent insect vector transmission",
+      "Disinfect all machetes and cutting tools with 20% sodium hypochlorite (bleach) or flame after every plant",
+      "Sterilize the surrounding soil of affected mats with bleaching powder @ 25 g/mat"
+    ],
+    "cultural_control": [
+      "Single Diseased Plant Removal (SDPR): Cut infected plant at ground level and destroy, rather than uprooting entire mat",
+      "Use certified pathogen-free tissue-cultured plantlets",
+      "Never use suckers from unknown or wilt-affected plantations"
+    ],
+    "biological_control": [
+      "Soil drenching with Pseudomonas fluorescens @ 20 g/mat at planting and at 3rd month"
+    ],
+    "monitoring_guidance": "Scout flowering plants bi-weekly for male bell wilting and premature fruit finger yellowing.",
+    "source": "ICAR-NRCB Tiruchirappalli & FAO Banana Pathology Guidelines",
+    "source_url": "https://nrcb.icar.gov.in",
+    "publication": "NRCB Guidelines for Bacterial Wilt Containment in Cavendish & Nendran",
+    "section_page": "Section 4: Bacterial Wilt Protocols",
+    "last_verified": "2026-05-25"
+  },
+  "banana__healthy": {
+    "crop": "banana",
+    "disease_id": "healthy",
+    "common_name": "Banana Healthy Mat",
+    "scientific_name": "Musa acuminata / Musa balbisiana",
+    "pathogen_type": "None",
+    "symptoms": [
+      "Expansive, broad, vibrant green leaves with sturdy midribs and clean pseudostems free from discoloration"
+    ],
+    "immediate_actions": [
+      "Maintain consistent drip irrigation (20-25 L/plant/day depending on stage)",
+      "Provide bamboo or wooden propping to supporting bunches as bunch weight increases"
+    ],
+    "cultural_control": [
+      "Balanced nutrient schedule: 200g N, 60g P, 300g K per plant applied in split doses",
+      "Regular desuckering to direct plant energy into primary bunch filling"
+    ],
+    "biological_control": [
+      "Apply Arbuscular Mycorrhizal Fungi (AMF) @ 50 g/plant and Azospirillum @ 25 g/plant at planting"
+    ],
+    "monitoring_guidance": "Regular inspection for pseudostem weevil boreholes and aphid colonies near throat.",
+    "source": "ICAR-NRCB Package of Practices",
+    "source_url": "https://nrcb.icar.gov.in/production-technology",
+    "publication": "Commercial Banana Cultivation Manual",
+    "section_page": "Chapter 2: Growth and Nutrition",
+    "last_verified": "2026-06-28"
+  }
+}

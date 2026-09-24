@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: thunai-agricultural-platform
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: PORT
+        value: 10000

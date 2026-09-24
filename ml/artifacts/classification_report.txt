@@ -1,0 +1,24 @@
+Class                               Precision  Recall     F1-Score   Support 
+---------------------------------------------------------------------------
+banana__bacterial_wilt              0.9655     1.0000     0.9825     28      
+banana__black_sigatoka              1.0000     0.8333     0.9091     6       
+banana__healthy                     1.0000     1.0000     1.0000     30      
+chilli__bacterial_spot              1.0000     1.0000     1.0000     30      
+chilli__healthy                     1.0000     1.0000     1.0000     30      
+potato__early_blight                1.0000     1.0000     1.0000     30      
+potato__healthy                     1.0000     1.0000     1.0000     24      
+potato__late_blight                 1.0000     0.9667     0.9831     30      
+rice__bacterial_blight              1.0000     1.0000     1.0000     6       
+rice__brown_spot                    1.0000     0.5000     0.6667     6       
+rice__leaf_smut                     0.6667     1.0000     0.8000     6       
+tomato__bacterial_spot              0.9310     0.9000     0.9153     30      
+tomato__early_blight                0.9333     0.9333     0.9333     30      
+tomato__healthy                     1.0000     1.0000     1.0000     30      
+tomato__late_blight                 0.8824     1.0000     0.9375     30      
+tomato__leaf_mold                   0.9677     1.0000     0.9836     30      
+tomato__septoria_leaf_spot          1.0000     0.8667     0.9286     30      
+tomato__yellow_leaf_curl            0.9355     0.9667     0.9508     30      
+---------------------------------------------------------------------------
+Macro Average                       0.9601     0.9426     0.9439     436     
+Accuracy                                                  0.9656     436     
+Crop-Conditioned Accuracy                                 0.9679     436     
