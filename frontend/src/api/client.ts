@@ -14,7 +14,7 @@ import {
   DoseLockTreatment
 } from '../types';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_URL ?? (typeof window !== 'undefined' && window.location.port === '5173' ? 'http://localhost:8000' : '');
 
 export class ThunaiApiClient {
   static async reverseGeocode(latitude: number, longitude: number): Promise<LocationData> {
